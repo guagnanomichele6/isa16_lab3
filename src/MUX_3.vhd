@@ -1,0 +1,20 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+ENTITY MUX_3 IS
+GENERIC (N:INTEGER);
+    PORT ( SEL : IN  STD_LOGIC_VECTOR(1 DOWNTO 0);
+           A   : IN  SIGNED (N-1 DOWNTO 0);
+           B   : IN  SIGNED (N-1 DOWNTO 0);
+           C   : IN  SIGNED (N-1 DOWNTO 0);
+           X   : OUT SIGNED (N-1 DOWNTO 0));
+END MUX_3;
+
+ARCHITECTURE BEHAVIORAL OF MUX_3 IS
+BEGIN
+    WITH SEL SELECT X <=
+	A WHEN "00",
+	B WHEN "10",
+	C WHEN OTHERS;
+END BEHAVIORAL;
