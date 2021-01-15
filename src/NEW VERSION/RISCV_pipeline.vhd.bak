@@ -152,7 +152,7 @@ ID_CTRL: CONTROL PORT MAP (OPCODE,BRANCH,MEMREAD,MEMTOREG,ALUop,MEMWRITE,ALUsrc1
 --PROCESS(CLK) 
 --BEGIN
 --			 IF (CLK'EVENT AND CLK='1') THEN
-														PC_2<=SIGNED(PC_1_OUT);
+														PC_2<=PC_1_OUT;
 														IMM_OUT_1<=SIGNED(IMM_OUT);
 														FUNC_1<=FUNC;
 														RD_1<=RD;

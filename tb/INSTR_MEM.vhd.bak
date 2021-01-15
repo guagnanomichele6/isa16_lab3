@@ -30,12 +30,12 @@ COMPONENT ADD_SUB IS
 END COMPONENT;
 
 impure function init_mem return mem_array is
-  file text_file : text open read_mode is "../sim/MachineCodeText.hex";
+  file text_file : text open read_mode is "D:/Doc/squola/ISA/Lab3/git/isa16_lab3/sim/MachineCodeText.hex";
   variable text_line : line;
   variable mem_f : mem_array;
 
 		VARIABLE	line_out	: line;
-		FILE 		res_fp 		: text OPEN WRITE_MODE IS "../sim/MachineCodeTextRes.txt";
+		FILE 		res_fp 		: text OPEN WRITE_MODE IS "D:/Doc/squola/ISA/Lab3/git/isa16_lab3/sim/MachineCodeTextRes.txt";
 
 
 
