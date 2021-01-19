@@ -1,0 +1,92 @@
+__start:
+	li x16,7          # put 7 in x16
+	la x4,v           # put in x4 the address of v
+	la x5,m           # put in x5 the address of m
+	li x13,0x3fffffff # init x13 with max pos
+loop:
+	beq x16,x0,done   # check all elements have been tested
+	addi x0,x0,0		# (NOP)
+	addi x0,x0,0		# (NOP)
+	addi x0,x0,0		# (NOP)
+	lw x8,0(x4)       # load new element in x8
+	addi x0,x0,0		# (NOP)
+	addi x0,x0,0		# (NOP)
+	addi x0,x0,0		# (NOP)
+	srai x9,x8,31     # apply shift to get sign mask in x9
+	addi x0,x0,0		# (NOP)
+	addi x0,x0,0		# (NOP)
+	addi x0,x0,0		# (NOP)
+	xor x10,x8,x9     # x10 = sign(x8)^x8
+	andi x9,x9,0x1    # x9 &= 0x1 (carry in)
+	addi x0,x0,0		# (NOP)
+	addi x0,x0,0		# (NOP)
+	addi x0,x0,0		# (NOP)
+	add x10,x10,x9    # x10 += x9 (add the carry in)
+	addi x4,x4,0x4	  # point to next element
+	addi x16,x16,-1   # decrease x16 by 1
+	addi x0,x0,0		# (NOP)
+	slt x11,x10,x13   # x11 = (x10 < x13) ? 1 : 0
+	addi x0,x0,0		# (NOP)
+	addi x0,x0,0		# (NOP)
+	addi x0,x0,0		# (NOP)
+	beq x11,x0,loop   # next element
+	addi x0,x0,0		# (NOP)
+	addi x0,x0,0		# (NOP)
+	addi x0,x0,0		# (NOP)
+	add x13,x10,x0    # update min
+	jal loop          # next element
+	addi x0,x0,0		# (NOP)
+	addi x0,x0,0		# (NOP)
+	addi x0,x0,0		# (NOP)
+done:
+	sw x13,0(x5)      # store the result
+endc:
+	jal endc  	  # infinite loop
+	addi x0,x0,0
+
+
+__start:
+li x16,7			IF 	ID	EX	ME	WB
+la x4,v					IF 	ID	EX	ME	WB
+la x5,m 					IF 	ID	EX	ME	WB
+li x13,0x3fffffff 				IF 	ID	EX	ME	WB
+
+loop: [FIRST ITERATION]
+beq x16,x0,done 					IF 	ID	EX	ME	WB	[RESPECTED RAW DD FOR x16 FROM li x16,7 (ID AFTER WITH PREV WB)]
+addi x0,x0,0 (NOP)						IF 	ID	EX	ME	WB
+addi x0,x0,0 (NOP)							IF 	ID	EX	ME	WB
+addi x0,x0,0 (NOP)								IF 	ID	EX	ME	WB
+lw x8,0(x4) 										IF 	ID	EX	ME	WB	[3 NOP ADDED TO RESPECT BRANCH WAIT (IF OK WITH PREV WB); RESPECTED RAW DD FOR x4 FROM la x4,v (ID AFTER WITH PREV WB)]
+addi x0,x0,0 (NOP)										IF 	ID	EX	ME	WB
+addi x0,x0,0 (NOP)											IF 	ID	EX	ME	WB
+addi x0,x0,0 (NOP)												IF 	ID	EX	ME	WB
+srai x9,x8,31 														IF 	ID	EX	ME	WB	[3 NOP ADDED TO RESPECT RAW DD FOR x8 FROM lw x8,0(x4) (ID AFTER WITH PREV WB)]
+addi x0,x0,0 (NOP)														IF 	ID	EX	ME	WB
+addi x0,x0,0 (NOP)															IF 	ID	EX	ME	WB
+addi x0,x0,0 (NOP)																IF 	ID	EX	ME	WB
+xor x10,x8,x9 																		IF 	ID	EX	ME	WB 	[3 NOP ADDED TO RESPECT RAW DD FOR x9 FROM srai x9,x8,31 (ID AFTER WITH PREV WB)]
+andi x9,x9,0x1																			IF 	ID	EX	ME	WB
+addi x0,x0,0 (NOP)																			IF 	ID	EX	ME	WB
+addi x0,x0,0 (NOP)																				IF 	ID	EX	ME	WB
+addi x0,x0,0 (NOP)																					IF 	ID	EX	ME	WB
+add x10,x10,x9																							IF 	ID	EX	ME	WB	[3 NOP ADDED TO RESPECT RAW DD FOR x9 FROM andi x9,x9,0x1 (ID AFTER WITH PREV WB)]
+addi x4,x4,0x4																								IF 	ID	EX	ME	WB
+addi x16,x16,-1																									IF 	ID	EX	ME	WB
+addi x0,x0,0 (NOP)																									IF 	ID	EX	ME	WB
+slt x11,x10,x13																											IF 	ID	EX	ME	WB	[1 NOP ADDED TO RESPECT RAW DD FOR x10 FROM add x10,x10,x9 (ID AFTER WITH PREV WB)]
+addi x0,x0,0 (NOP)																											IF 	ID	EX	ME	WB
+addi x0,x0,0 (NOP)																												IF 	ID	EX	ME	WB
+addi x0,x0,0 (NOP)																													IF 	ID	EX	ME	WB
+beq x11,x0,loop 																														IF 	ID	EX	ME	WB	[3 NOP ADDED TO RESPECT RAW DD FOR x11 FROM slt x11,x10,x13 (ID AFTER WITH PREV WB)]
+addi x0,x0,0 (NOP)																															IF 	ID	EX	ME	WB
+addi x0,x0,0 (NOP)																																IF 	ID	EX	ME	WB
+addi x0,x0,0 (NOP)																																	IF 	ID	EX	ME	WB
+	T:	beq x16,x0,done																																	IF 	ID	EX	ME	WB
+		... [OK]
+	U:	add x13,x10,x0																																	IF 	ID	EX	ME	WB
+		jal loop																																			IF 	ID	EX	ME	WB
+		addi x0,x0,0 (NOP)																																		IF 	ID	EX	ME	WB
+		addi x0,x0,0 (NOP)																																			IF 	ID	EX	ME	WB
+		addi x0,x0,0 (NOP)																																				IF 	ID	EX	ME	WB
+		beq x16,x0,done
+		... [OK]

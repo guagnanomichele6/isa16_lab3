@@ -7,7 +7,7 @@ USE ieee.std_logic_textio.all;
 LIBRARY std;
 USE std.textio.all;
 
-ENTITY DATA_MEM IS     
+ENTITY DATA_MEM IS
  PORT( DATA_IN : IN STD_LOGIC_VECTOR (63 DOWNTO 0);
 		 clk, MEM_READ, MEM_WRITE : IN STD_LOGIC;
 		 ADDRESSE : IN STD_LOGIC_VECTOR (63 DOWNTO 0); 
@@ -32,12 +32,12 @@ SIGNAL D_OUT: STD_LOGIC_VECTOR(63 DOWNTO 0);
 SIGNAL ADDR: STD_LOGIC_VECTOR(9 DOWNTO 0);
 
 impure function init_mem_d return mem_d_array is
-  file text_file : text open read_mode is "D:/Doc/squola/ISA/Lab3/git/isa16_lab3/sim/MachineCodeData.hex";
+  file text_file : text open read_mode is "../sim/MachineCodeData.hex";
   variable text_line : line;
   variable mem_f : mem_d_array;
   variable PROV : mem_p_array;
 		VARIABLE	line_out	: line;
-		FILE 		res_fp 		: text OPEN WRITE_MODE IS "D:/Doc/squola/ISA/Lab3/git/isa16_lab3/sim/MachineCodeDataRes.txt";
+		FILE 		res_fp 		: text OPEN WRITE_MODE IS "../sim/MachineCodeDataRes.txt";
 begin
   for i in 0 to 1023 loop
     readline(text_file, text_line);
