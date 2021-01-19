@@ -20,22 +20,10 @@ m:
 	.align	2
 	.globl	__start
 __start:
-	addi x16,x0,0x00000007    # put 7 in x16
-	auipc x4,0x0000fc10	# put in x4 the address of v
-	addi x0,x0,0		# (NOP)
-	addi x0,x0,0		# (NOP)
-	addi x0,x0,0		# (NOP)
-	addi x4,x4,0xfffffffc
-	auipc x5,0x0000fc10	# put in x5 the address of m
-	addi x0,x0,0		# (NOP)
-	addi x0,x0,0		# (NOP)
-	addi x0,x0,0		# (NOP)
-	addi x5,x5,0x00000010
-	lui x13,0x00040000 # init x13 with max pos
-	addi x0,x0,0		# (NOP)
-	addi x0,x0,0		# (NOP)
-	addi x0,x0,0		# (NOP)
-	addi x13,x13,0xffffffff
+	li x16,7          # put 7 in x16
+	la x4,v           # put in x4 the address of v
+	la x5,m           # put in x5 the address of m
+	li x13,0x3fffffff # init x13 with max pos
 loop:
 	beq x16,x0,done   # check all elements have been tested
 	addi x0,x0,0		# (NOP)

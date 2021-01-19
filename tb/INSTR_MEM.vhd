@@ -39,11 +39,11 @@ impure function init_mem return mem_array is
 
 
 begin
-  for i in 0 to 45 loop
+  for i in 0 to 54 loop
     readline(text_file, text_line);
     hread(text_line, mem_f(i));
   end loop;
-for i in 46 to 2**8-1 loop
+for i in 55 to 2**8-1 loop
     mem_f(i):="00000000000000000000000000010011";--others are NOP
   end loop;
 for i in 0 to 2**8-1 loop
