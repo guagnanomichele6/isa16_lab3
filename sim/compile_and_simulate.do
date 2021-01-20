@@ -28,6 +28,9 @@ vsim work.tb_riscv
 add wave -position insertpoint sim:/tb_riscv/*
 add wave -position insertpoint sim:/tb_riscv/IM/*
 add wave -position insertpoint sim:/tb_riscv/UUT/*
+add wave -position insertpoint sim:/tb_riscv/UUT/ID_STAGE/RF/*
+add wave -position insertpoint sim:/tb_riscv/UUT/EX_STAGE/EX_ADD/*
+add wave -position insertpoint sim:/tb_riscv/UUT/EX_STAGE/ALU_DP/*
 add wave -position insertpoint sim:/tb_riscv/DM/*
 
 configure wave -timelineunits ns
