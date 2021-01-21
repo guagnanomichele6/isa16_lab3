@@ -1,0 +1,69 @@
+Running PRESTO HDLC
+
+Inferred memory devices in process
+	in routine RISCV_pipeline line 136 in file
+		'/home/isa16/lab3/isa16_lab3/src/RISCV_pipeline.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      PC_1_reg       | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|  INSTRUCTION_1_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine RISCV_pipeline line 149 in file
+		'/home/isa16/lab3/isa16_lab3/src/RISCV_pipeline.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      PC_2_reg       | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    IMM_OUT_1_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|     FUNC_1_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|      RD_1_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+| RF_READ_DATA1_1_reg | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+| RF_READ_DATA2_1_reg | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    BRANCH_1_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    MEMREAD_1_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   MEMTOREG_1_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     ALUop_1_reg     | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|   MEMWRITE_1_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    ALUsrc1_1_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    ALUsrc2_1_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   REGWRITE_1_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine RISCV_pipeline line 175 in file
+		'/home/isa16/lab3/isa16_lab3/src/RISCV_pipeline.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  ALU_RESULT_1_reg   | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+| RF_READ_DATA2_2_reg | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|      RD_2_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|     ZERO_1_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    BRANCH_2_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    MEMREAD_2_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   MEMTOREG_2_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   MEMWRITE_2_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   REGWRITE_2_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|  BRANCH_SUM_1_reg   | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine RISCV_pipeline line 197 in file
+		'/home/isa16/lab3/isa16_lab3/src/RISCV_pipeline.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  ALU_RESULT_2_reg   | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+| DM_READ_DATA_1_reg  | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|      RD_3_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|   MEMTOREG_3_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   REGWRITE_3_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/home/isa16/lab3/isa16_lab3/syn/RISCV_pipeline.db'. (DDB-24)
+Elaborated 1 design.
+Current design is now 'RISCV_pipeline'.
+1
