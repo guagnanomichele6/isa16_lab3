@@ -1,6 +1,6 @@
 //`timescale 1ns
 
-module tb_riscv;
+module tb_riscv_abs;
 
 	wire CLK_i;
 	wire RST_i;
@@ -18,12 +18,12 @@ module tb_riscv;
 		.RST(RST_i)
 	);
 
-	INSTR_MEM IM (
+	INSTR_MEM_abs IM (
 		.ADDRESS(IM_ADDRESS_i),
 		.INSTR(INSTR_i)
 	);
 
-	RISCV_pipeline UUT (
+	RISCV_pipeline_abs UUT (
 		.CLK(CLK_i),
 		.RST(RST_i),
    		.INSTRUCTION(INSTR_i),

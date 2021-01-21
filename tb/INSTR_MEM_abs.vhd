@@ -7,13 +7,13 @@ USE ieee.std_logic_textio.all;
 LIBRARY std;
 USE std.textio.all;
 
-ENTITY INSTR_MEM IS
+ENTITY INSTR_MEM_abs IS
 	PORT (	ADDRESS : IN STD_LOGIC_VECTOR (63 DOWNTO 0); --ADDRESS grande 64 perché PC ha 64 bit
     		INSTR : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
     	);
-END INSTR_MEM;
+END INSTR_MEM_abs;
 
-ARCHITECTURE BEHAVIOUR OF INSTR_MEM IS
+ARCHITECTURE BEHAVIOUR OF INSTR_MEM_abs IS
 
 	TYPE MEM_I_ARRAY IS ARRAY(0 TO 2**8-1) OF STD_LOGIC_VECTOR (31 DOWNTO 0);
 
@@ -23,11 +23,11 @@ ARCHITECTURE BEHAVIOUR OF INSTR_MEM IS
 		VARIABLE	count		: INTEGER RANGE 0 to 2**8-1;
 
 		-- Save instructions in mem_f from input hex file
-		FILE 		text_file 	: text OPEN READ_MODE IS "../sim/MachineCodeText.hex";
+		FILE 		text_file 	: text OPEN READ_MODE IS "../sim/MachineCodeText_abs.hex";
 		VARIABLE	text_line 	: line;
 
 		-- Write mem_f content to I_MEM_init_content
-		FILE 		fp_out		: text OPEN WRITE_MODE IS "../sim/I_MEM_init_content.txt";
+		FILE 		fp_out		: text OPEN WRITE_MODE IS "../sim/I_MEM_init_content_abs.txt";
 		VARIABLE	line_out	: line;
 
 	BEGIN

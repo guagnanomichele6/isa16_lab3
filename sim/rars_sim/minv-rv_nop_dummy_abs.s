@@ -45,18 +45,9 @@ loop:
 	addi x0,x0,0		# (NOP)
 	addi x0,x0,0		# (NOP)
 	addi x0,x0,0		# (NOP)
-	srai x9,x8,31    	# apply shift to get sign mask in x9
-	addi x0,x0,0		# (NOP)
-	addi x0,x0,0		# (NOP)
-	addi x0,x0,0		# (NOP)
-	xor x10,x8,x9     	# x10 = sign(x8)^x8
-	andi x9,x9,0x1    	# x9 &= 0x1 (carry in)
-	addi x0,x0,0		# (NOP)
-	addi x0,x0,0		# (NOP)
-	addi x0,x0,0		# (NOP)
-	add x10,x10,x9   	 # x10 += x9 (add the carry in)
+	addi x0,x0,0 		# DUMMY NOP: to be replaced with ABS code
 	addi x4,x4,0x4	  	# point to next element
-	addi x16,x16,-1  	 # decrease x16 by 1
+	addi x16,x16,-1  	# decrease x16 by 1
 	addi x0,x0,0		# (NOP)
 	slt x11,x10,x13   	# x11 = (x10 < x13) ? 1 : 0
 	addi x0,x0,0		# (NOP)
@@ -66,7 +57,7 @@ loop:
 	addi x0,x0,0		# (NOP)
 	addi x0,x0,0		# (NOP)
 	addi x0,x0,0		# (NOP)
-	add x13,x10,x0   	 # update min
+	add x13,x10,x0   	# update min
 	jal loop          	# next element
 	addi x0,x0,0		# (NOP)
 	addi x0,x0,0		# (NOP)

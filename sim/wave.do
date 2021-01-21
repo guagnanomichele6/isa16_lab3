@@ -1,109 +1,24 @@
-onerror {resume}
-quietly WaveActivateNextPane {} 0
 add wave -noupdate /tb_riscv/CLK_i
 add wave -noupdate /tb_riscv/RST_i
-add wave -noupdate /tb_riscv/DM_ADDRESSE_i
-add wave -noupdate /tb_riscv/IM_ADDRESSE_i
-add wave -noupdate /tb_riscv/MEM_WRITE_i
-add wave -noupdate /tb_riscv/MEM_READ_i
 add wave -noupdate /tb_riscv/SMPL_STAT_i
-add wave -noupdate -radix hexadecimal /tb_riscv/INSTR_i
-add wave -noupdate /tb_riscv/DATA_in
-add wave -noupdate /tb_riscv/DATA_out
-add wave -noupdate /tb_riscv/IM/ADDRESSE
-add wave -noupdate /tb_riscv/IM/INSTR
-add wave -noupdate /tb_riscv/IM/ADDR
-add wave -noupdate /tb_riscv/UUT/CLK
-add wave -noupdate /tb_riscv/UUT/RST
-add wave -noupdate /tb_riscv/UUT/INSTRUCTION
-add wave -noupdate /tb_riscv/UUT/DM_READ_DATA
-add wave -noupdate /tb_riscv/UUT/IM_ADDRESS
-add wave -noupdate /tb_riscv/UUT/MEMWRITE_OUT
-add wave -noupdate /tb_riscv/UUT/MEMREAD_OUT
-add wave -noupdate /tb_riscv/UUT/DM_ADDRESS
-add wave -noupdate /tb_riscv/UUT/DM_WRITE_DATA
-add wave -noupdate /tb_riscv/UUT/PCsrc
-add wave -noupdate /tb_riscv/UUT/INSTRUCTION_OUT
-add wave -noupdate /tb_riscv/UUT/INSTRUCTION_1
-add wave -noupdate /tb_riscv/UUT/PC_OUT
-add wave -noupdate /tb_riscv/UUT/PC_1
-add wave -noupdate /tb_riscv/UUT/PC_1_OUT
-add wave -noupdate /tb_riscv/UUT/PC_2
-add wave -noupdate /tb_riscv/UUT/FUNC
-add wave -noupdate /tb_riscv/UUT/FUNC_1
-add wave -noupdate /tb_riscv/UUT/RD
-add wave -noupdate /tb_riscv/UUT/RD_1
-add wave -noupdate /tb_riscv/UUT/RD_1_OUT
-add wave -noupdate /tb_riscv/UUT/RD_2
-add wave -noupdate /tb_riscv/UUT/RD_2_OUT
-add wave -noupdate /tb_riscv/UUT/RD_3
-add wave -noupdate /tb_riscv/UUT/RF_READ_DATA1
-add wave -noupdate /tb_riscv/UUT/RF_READ_DATA1_1
-add wave -noupdate /tb_riscv/UUT/RF_READ_DATA2
-add wave -noupdate /tb_riscv/UUT/RF_READ_DATA2_1
-add wave -noupdate /tb_riscv/UUT/RF_READ_DATA2_1_OUT
-add wave -noupdate /tb_riscv/UUT/RF_READ_DATA2_2
-add wave -noupdate /tb_riscv/UUT/MUX_WB_OUT
-add wave -noupdate /tb_riscv/UUT/OPCODE
-add wave -noupdate /tb_riscv/UUT/IMM_OUT
-add wave -noupdate /tb_riscv/UUT/IMM_OUT_1
-add wave -noupdate /tb_riscv/UUT/REGWRITE
-add wave -noupdate /tb_riscv/UUT/REGWRITE_1
-add wave -noupdate /tb_riscv/UUT/REGWRITE_2
-add wave -noupdate /tb_riscv/UUT/REGWRITE_3
-add wave -noupdate /tb_riscv/UUT/ALUop
-add wave -noupdate /tb_riscv/UUT/ALUop_1
-add wave -noupdate /tb_riscv/UUT/ALUsrc1
-add wave -noupdate /tb_riscv/UUT/ALUsrc1_1
-add wave -noupdate /tb_riscv/UUT/ALUsrc2
-add wave -noupdate /tb_riscv/UUT/ALUsrc2_1
-add wave -noupdate /tb_riscv/UUT/MEMTOREG
-add wave -noupdate /tb_riscv/UUT/MEMTOREG_1
-add wave -noupdate /tb_riscv/UUT/MEMTOREG_2
-add wave -noupdate /tb_riscv/UUT/MEMTOREG_3
-add wave -noupdate /tb_riscv/UUT/BRANCH
-add wave -noupdate /tb_riscv/UUT/BRANCH_1
-add wave -noupdate /tb_riscv/UUT/BRANCH_2
-add wave -noupdate /tb_riscv/UUT/MEMREAD
-add wave -noupdate /tb_riscv/UUT/MEMREAD_1
-add wave -noupdate /tb_riscv/UUT/MEMREAD_2
-add wave -noupdate /tb_riscv/UUT/MEMWRITE
-add wave -noupdate /tb_riscv/UUT/MEMWRITE_1
-add wave -noupdate /tb_riscv/UUT/MEMWRITE_2
-add wave -noupdate /tb_riscv/UUT/ALUctrl
-add wave -noupdate /tb_riscv/UUT/ZERO
-add wave -noupdate /tb_riscv/UUT/ZERO_1
-add wave -noupdate /tb_riscv/UUT/BRANCH_SUM
-add wave -noupdate /tb_riscv/UUT/ALU_RESULT
-add wave -noupdate /tb_riscv/UUT/ALU_RESULT_1
-add wave -noupdate /tb_riscv/UUT/ALU_RESULT_2
-add wave -noupdate /tb_riscv/UUT/DM_READ_DATA_OUT
-add wave -noupdate /tb_riscv/UUT/DM_READ_DATA_1
-add wave -noupdate /tb_riscv/UUT/DM_WRITE_DATA_OUT
-add wave -noupdate /tb_riscv/UUT/RF_WRITE_DATA
-add wave -noupdate /tb_riscv/DM/DATA_IN
-add wave -noupdate /tb_riscv/DM/clk
-add wave -noupdate /tb_riscv/DM/MEM_READ
-add wave -noupdate /tb_riscv/DM/MEM_WRITE
-add wave -noupdate /tb_riscv/DM/ADDRESSE
-add wave -noupdate /tb_riscv/DM/DATA_OUT
-add wave -noupdate /tb_riscv/DM/D_OUT
-add wave -noupdate /tb_riscv/DM/ADDR
-TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {346461 ps} 0}
-quietly wave cursor active 1
-configure wave -namecolwidth 150
-configure wave -valuecolwidth 100
-configure wave -justifyvalue left
-configure wave -signalnamewidth 0
-configure wave -snapdistance 10
-configure wave -datasetprefix 0
-configure wave -rowmargin 4
-configure wave -childrowmargin 2
-configure wave -gridoffset 0
-configure wave -gridperiod 1
-configure wave -griddelta 40
-configure wave -timeline 0
-configure wave -timelineunits ns
-update
-WaveRestoreZoom {0 ps} {840 ns}
+add wave -noupdate -radix hexadecimal /tb_riscv/UUT/INSTRUCTION_OUT
+add wave -noupdate -radix hexadecimal /tb_riscv/UUT/PC_OUT
+add wave -noupdate -divider ALU
+add wave -noupdate /tb_riscv/UUT/EX_STAGE/ALU_DP/A
+add wave -noupdate /tb_riscv/UUT/EX_STAGE/ALU_DP/B
+add wave -noupdate /tb_riscv/UUT/EX_STAGE/ALU_DP/ALU_OPERATION
+add wave -noupdate /tb_riscv/UUT/EX_STAGE/ALU_DP/ZERO
+add wave -noupdate /tb_riscv/UUT/EX_STAGE/ALU_DP/ALU_RESULT
+add wave -noupdate /tb_riscv/UUT/EX_STAGE/ALU_DP/ALU_RESULT_PROV
+add wave -noupdate /tb_riscv/UUT/EX_STAGE/ALU_DP/ALU_RESULT_PROV_1
+add wave -noupdate /tb_riscv/UUT/EX_STAGE/ALU_DP/ALU_RESULT_PROV_2
+add wave -noupdate /tb_riscv/UUT/EX_STAGE/ALU_DP/ALU_RESULT_PROV_3
+add wave -noupdate /tb_riscv/UUT/EX_STAGE/ALU_DP/ALU_RESULT_PROV_4
+add wave -noupdate /tb_riscv/UUT/EX_STAGE/ALU_DP/ALU_RESULT_PROV_5
+add wave -noupdate /tb_riscv/UUT/EX_STAGE/ALU_DP/ALU_RESULT_PROV_6
+add wave -noupdate /tb_riscv/UUT/EX_STAGE/ALU_DP/SHIFT
+add wave -noupdate /tb_riscv/UUT/EX_STAGE/ALU_DP/ZERO1
+add wave -noupdate /tb_riscv/UUT/EX_STAGE/ALU_DP/ZERO2
+add wave -noupdate -divider MEMs
+add wave -noupdate -radix decimal /tb_riscv/UUT/ID_STAGE/RF/MEM
+add wave -noupdate -radix decimal /tb_riscv/DM/mem_d
