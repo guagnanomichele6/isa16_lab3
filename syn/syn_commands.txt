@@ -1,30 +1,20 @@
-### READ VHDL AND ELABORATE
+### READ VHDL AND ELABORATE #6.41 was next
 
-analyze -library WORK -format vhdl {/home/isa16/lab3/isa16_lab3/src/WB.vhd /home/isa16/lab3/isa16_lab3/src/SUBTRACTOR.vhd /home/isa16/lab3/isa16_lab3/src/RISCV_pipeline.vhd /home/isa16/lab3/isa16_lab3/src/REG_FILE.vhd /home/isa16/lab3/isa16_lab3/src/PC_REG.vhd /home/isa16/lab3/isa16_lab3/src/MEM.vhd /home/isa16/lab3/isa16_lab3/src/ImmGen.vhd /home/isa16/lab3/isa16_lab3/src/FETCH.vhd /home/isa16/lab3/isa16_lab3/src/EXECUTE.vhd /home/isa16/lab3/isa16_lab3/src/DECODE.vhd /home/isa16/lab3/isa16_lab3/src/CONTROL.vhd /home/isa16/lab3/isa16_lab3/src/COMPARATOR.vhd /home/isa16/lab3/isa16_lab3/src/ALU_CONTROL.vhd /home/isa16/lab3/isa16_lab3/src/ALU.vhd /home/isa16/lab3/isa16_lab3/src/ADDER.vhd}
-
+analyze -library WORK -format vhdl {/home/isa16/lab3/isa16_lab3/src/common/WB.vhd /home/isa16/lab3/isa16_lab3/src/common/SUBTRACTOR.vhd /home/isa16/lab3/isa16_lab3/src/common/REG_FILE.vhd /home/isa16/lab3/isa16_lab3/src/common/PC_REG.vhd /home/isa16/lab3/isa16_lab3/src/common/MEM.vhd /home/isa16/lab3/isa16_lab3/src/common/ImmGen.vhd /home/isa16/lab3/isa16_lab3/src/common/FETCH.vhd /home/isa16/lab3/isa16_lab3/src/common/DECODE.vhd /home/isa16/lab3/isa16_lab3/src/common/CONTROL.vhd /home/isa16/lab3/isa16_lab3/src/common/COMPARATOR.vhd /home/isa16/lab3/isa16_lab3/src/no_abs/RISCV_pipeline.vhd /home/isa16/lab3/isa16_lab3/src/no_abs/EXECUTE.vhd /home/isa16/lab3/isa16_lab3/src/no_abs/ALU_CONTROL.vhd /home/isa16/lab3/isa16_lab3/src/no_abs/ALU.vhd /home/isa16/lab3/isa16_lab3/src/common/ADDER.vhd}
 set power_preserve_rtl_hier_names true
-
 elaborate RISCV_pipeline -arch STRUCT -lib WORK > elaborate.txt
-
 uniquify
-
 link
 
 
 ### APPLYING CONSTRAINTS
 
-create_clock -name MY_CLK -period 10.0 CLK
-
+create_clock -name MY_CLK -period 2.19 CLK
 set_dont_touch_network MY_CLK
-
 set_clock_uncertainty 0.07 [get_clocks MY_CLK]
-
 set_input_delay 0.5 -max -clock MY_CLK [remove_from_collection [all_inputs] CLK]
-
 set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
-
 set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A]
-
 set_load $OLOAD [all_outputs]
 
 
@@ -35,20 +25,14 @@ compile
 
 ### REPORTS
 
-report_timing > report_timing.txt
-
-report_area > report_area.txt
-
+report_timing > report_timing_2_19_ns_MET.txt
+report_area > report_area_2_19_ns_MET.txt
 ungroup -all -flatten
-
-change_names -hierarchy -rules -verilog
-
+change_names -hierarchy -rules -verilog   ### ERROR!
 write_sdf ../netlist/RISCV_pipeline.sdf
-
 write -f verilog -hierarchy -output ../netlist/RISCV_pipeline.v
-
 write_sdc ../netlist/RISCV_pipeline.sdc
 
 ### CLOSE
 
-quit
+# quit

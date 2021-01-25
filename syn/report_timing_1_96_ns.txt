@@ -1,0 +1,105 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'RISCV_pipeline' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RISCV_pipeline
+Version: O-2018.06-SP4
+Date   : Sat Jan 23 21:40:09 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: ALUsrc1_1_reg
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: ALU_RESULT_1_reg[63]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV_pipeline     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ALUsrc1_1_reg/CK (SDFF_X1)                              0.00 #     0.00 r
+  ALUsrc1_1_reg/Q (SDFF_X1)                               0.08       0.08 r
+  EX_STAGE/ALUsrc1_1 (EXECUTE)                            0.00       0.08 r
+  EX_STAGE/U3/Z (BUF_X1)                                  0.06       0.15 r
+  EX_STAGE/U2/Z (MUX2_X1)                                 0.09       0.23 f
+  EX_STAGE/ALU_DP/A[15] (ALU)                             0.00       0.23 f
+  EX_STAGE/ALU_DP/U4/Z (BUF_X1)                           0.04       0.28 f
+  EX_STAGE/ALU_DP/ADD/A[15] (ADDER_N64_1)                 0.00       0.28 f
+  EX_STAGE/ALU_DP/ADD/add_14/A[15] (ADDER_N64_1_DW01_add_1)
+                                                          0.00       0.28 f
+  EX_STAGE/ALU_DP/ADD/add_14/U503/ZN (NOR2_X1)            0.04       0.32 r
+  EX_STAGE/ALU_DP/ADD/add_14/U502/ZN (OAI21_X1)           0.03       0.35 f
+  EX_STAGE/ALU_DP/ADD/add_14/U499/ZN (AOI21_X1)           0.05       0.40 r
+  EX_STAGE/ALU_DP/ADD/add_14/U475/ZN (OAI21_X1)           0.04       0.44 f
+  EX_STAGE/ALU_DP/ADD/add_14/U471/ZN (AOI21_X1)           0.06       0.49 r
+  EX_STAGE/ALU_DP/ADD/add_14/U464/ZN (OAI21_X1)           0.03       0.52 f
+  EX_STAGE/ALU_DP/ADD/add_14/U463/ZN (AOI21_X1)           0.04       0.56 r
+  EX_STAGE/ALU_DP/ADD/add_14/U462/ZN (OAI21_X1)           0.03       0.60 f
+  EX_STAGE/ALU_DP/ADD/add_14/U469/ZN (AOI21_X1)           0.04       0.64 r
+  EX_STAGE/ALU_DP/ADD/add_14/U524/ZN (OAI21_X1)           0.03       0.67 f
+  EX_STAGE/ALU_DP/ADD/add_14/U523/ZN (AOI21_X1)           0.04       0.71 r
+  EX_STAGE/ALU_DP/ADD/add_14/U517/ZN (OAI21_X1)           0.03       0.75 f
+  EX_STAGE/ALU_DP/ADD/add_14/U516/ZN (AOI21_X1)           0.04       0.79 r
+  EX_STAGE/ALU_DP/ADD/add_14/U509/ZN (OAI21_X1)           0.03       0.82 f
+  EX_STAGE/ALU_DP/ADD/add_14/U508/ZN (AOI21_X1)           0.04       0.86 r
+  EX_STAGE/ALU_DP/ADD/add_14/U507/ZN (OAI21_X1)           0.03       0.89 f
+  EX_STAGE/ALU_DP/ADD/add_14/U514/ZN (AOI21_X1)           0.04       0.94 r
+  EX_STAGE/ALU_DP/ADD/add_14/U556/ZN (OAI21_X1)           0.03       0.97 f
+  EX_STAGE/ALU_DP/ADD/add_14/U555/ZN (AOI21_X1)           0.04       1.01 r
+  EX_STAGE/ALU_DP/ADD/add_14/U549/ZN (OAI21_X1)           0.03       1.04 f
+  EX_STAGE/ALU_DP/ADD/add_14/U548/ZN (AOI21_X1)           0.04       1.09 r
+  EX_STAGE/ALU_DP/ADD/add_14/U544/ZN (OAI21_X1)           0.04       1.12 f
+  EX_STAGE/ALU_DP/ADD/add_14/U545/ZN (NAND2_X1)           0.03       1.16 r
+  EX_STAGE/ALU_DP/ADD/add_14/U542/ZN (NAND3_X1)           0.04       1.19 f
+  EX_STAGE/ALU_DP/ADD/add_14/U9/CO (FA_X1)                0.10       1.29 f
+  EX_STAGE/ALU_DP/ADD/add_14/U537/ZN (NAND2_X1)           0.04       1.33 r
+  EX_STAGE/ALU_DP/ADD/add_14/U535/ZN (NAND3_X1)           0.04       1.37 f
+  EX_STAGE/ALU_DP/ADD/add_14/U539/ZN (NAND2_X1)           0.04       1.40 r
+  EX_STAGE/ALU_DP/ADD/add_14/U590/ZN (NAND3_X1)           0.04       1.44 f
+  EX_STAGE/ALU_DP/ADD/add_14/U586/ZN (NAND2_X1)           0.04       1.48 r
+  EX_STAGE/ALU_DP/ADD/add_14/U583/ZN (NAND3_X1)           0.04       1.51 f
+  EX_STAGE/ALU_DP/ADD/add_14/U579/ZN (NAND2_X1)           0.04       1.55 r
+  EX_STAGE/ALU_DP/ADD/add_14/U578/ZN (NAND3_X1)           0.04       1.59 f
+  EX_STAGE/ALU_DP/ADD/add_14/U572/ZN (NAND2_X1)           0.04       1.63 r
+  EX_STAGE/ALU_DP/ADD/add_14/U575/ZN (NAND3_X1)           0.04       1.67 f
+  EX_STAGE/ALU_DP/ADD/add_14/U574/ZN (NAND2_X1)           0.03       1.69 r
+  EX_STAGE/ALU_DP/ADD/add_14/U568/ZN (AND3_X1)            0.05       1.75 r
+  EX_STAGE/ALU_DP/ADD/add_14/U567/ZN (XNOR2_X1)           0.03       1.78 f
+  EX_STAGE/ALU_DP/ADD/add_14/SUM[63] (ADDER_N64_1_DW01_add_1)
+                                                          0.00       1.78 f
+  EX_STAGE/ALU_DP/ADD/S[63] (ADDER_N64_1)                 0.00       1.78 f
+  EX_STAGE/ALU_DP/U6/ZN (AOI221_X1)                       0.06       1.84 r
+  EX_STAGE/ALU_DP/U5/ZN (INV_X1)                          0.02       1.86 f
+  EX_STAGE/ALU_DP/ALU_RESULT[63] (ALU)                    0.00       1.86 f
+  EX_STAGE/ALU_RESULT[63] (EXECUTE)                       0.00       1.86 f
+  ALU_RESULT_1_reg[63]/D (DFF_X1)                         0.01       1.87 f
+  data arrival time                                                  1.87
+
+  clock MY_CLK (rise edge)                                1.96       1.96
+  clock network delay (ideal)                             0.00       1.96
+  clock uncertainty                                      -0.07       1.89
+  ALU_RESULT_1_reg[63]/CK (DFF_X1)                        0.00       1.89 r
+  library setup time                                     -0.04       1.85
+  data required time                                                 1.85
+  --------------------------------------------------------------------------
+  data required time                                                 1.85
+  data arrival time                                                 -1.87
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.02
+
+
+1
