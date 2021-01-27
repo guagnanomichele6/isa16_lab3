@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Tue Jan 26 15:27:18 2021
+#@ # Date:   Wed Jan 27 18:37:12 2021
 #@ # Run by: isa16@localhost.localdomain
 #@ 
 
@@ -6638,53 +6638,14 @@ source /home/isa16/lab3/isa16_lab3/syn_abs/.synopsys_dc.setup
 #@ set synthetic_library [list "dw_foundation.sldb" ]
 #@ # -- End source /home/isa16/lab3/isa16_lab3/syn_abs/.synopsys_dc.setup
 
-source -echo -verbose /home/isa16/lab3/isa16_lab3/syn_abs/./syn_commands_abs.txt
-#@ # -- Starting source /home/isa16/lab3/isa16_lab3/syn_abs/./syn_commands_abs.txt
+source -echo -verbose /home/isa16/lab3/isa16_lab3/syn_abs/./syn_commands_power_report_abs.txt
+#@ # -- Starting source /home/isa16/lab3/isa16_lab3/syn_abs/./syn_commands_power_report_abs.txt
 
-#@ ### READ VHDL AND ELABORATE #6.41 was next
+#@ read_verilog -netlist ../netlist_abs/RISCV_pipeline_abs.v
+#@ read_saif -input ../saif_abs/RISCV_pipeline_syn_abs.saif -instance tb_riscv_abs/UUT -unit ns -scale 1
+#@ create_clock -name MY_CLK CLK
 #@ 
-#@ analyze -library WORK -format vhdl {/home/isa16/lab3/isa16_lab3/src/common/WB.vhd /home/isa16/lab3/isa16_lab3/src/common/SUBTRACTOR.vhd /home/isa16/lab3/isa16_lab3/src/common/REG_FILE.vhd /home/isa16/lab3/isa16_lab3/src/common/PC_REG.vhd /home/isa16/lab3/isa16_lab3/src/common/MEM.vhd /home/isa16/lab3/isa16_lab3/src/common/ImmGen.vhd /home/isa16/lab3/isa16_lab3/src/common/FETCH.vhd /home/isa16/lab3/isa16_lab3/src/common/DECODE.vhd /home/isa16/lab3/isa16_lab3/src/common/CONTROL.vhd /home/isa16/lab3/isa16_lab3/src/common/COMPARATOR.vhd /home/isa16/lab3/isa16_lab3/src/abs/RISCV_pipeline_abs.vhd /home/isa16/lab3/isa16_lab3/src/abs/EXECUTE_abs.vhd /home/isa16/lab3/isa16_lab3/src/abs/ALU_CONTROL_abs.vhd /home/isa16/lab3/isa16_lab3/src/abs/ALU_abs.vhd /home/isa16/lab3/isa16_lab3/src/common/ADDER.vhd}
-#@ set power_preserve_rtl_hier_names true
-#@ elaborate RISCV_pipeline_abs -arch STRUCT -lib WORK > elaborate.txt
-#@ uniquify
-#@ link
-#@ 
-#@ 
-#@ ### APPLYING CONSTRAINTS
-#@ 
-#@ create_clock -name MY_CLK -period 3.21 CLK
-#@ set_dont_touch_network MY_CLK
-#@ set_clock_uncertainty 0.07 [get_clocks MY_CLK]
-#@ set_input_delay 0.5 -max -clock MY_CLK [remove_from_collection [all_inputs] CLK]
-#@ set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
-#@ set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A]
-#@ set_load $OLOAD [all_outputs]
-#@ 
-#@ 
-#@ ### START SYNTHESIS
-#@ 
-#@ compile
-#@ 
-#@ 
-#@ ### REPORTS
-#@ 
-#@ report_timing > report_timing_3_21_ns.txt
-#@ # report_area > report_area_3_22_ns_MET.txt
-#@ # ungroup -all -flatten
-#@ # change_names -hierarchy -rules -verilog   ### ERROR!
-#@ # write_sdf ../netlist_abs/RISCV_pipeline_abs.sdf
-#@ # write -f verilog -hierarchy -output ../netlist_abs/RISCV_pipeline_abs.v
-#@ # write_sdc ../netlist_abs/RISCV_pipeline_abs.sdc
-#@ 
-#@ ### CLOSE
-#@ 
-#@ # quit
-#@ # -- End source /home/isa16/lab3/isa16_lab3/syn_abs/./syn_commands_abs.txt
+#@ report_power > report_power_abs.txt
+#@ # -- End source /home/isa16/lab3/isa16_lab3/syn_abs/./syn_commands_power_report_abs.txt
 
-report_area > report_area_3_21_ns_MET.txt
-ungroup -all -flatten
-change_names -hierarchy -rules -verilog
-write_sdf ../netlist_abs/RISCV_pipeline_abs.sdf
-write -f verilog -hierarchy -output ../netlist_abs/RISCV_pipeline_abs.v
-write_sdc ../netlist_abs/RISCV_pipeline_abs.sdc
 quit

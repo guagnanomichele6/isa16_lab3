@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : RISCV_pipeline_abs
+Version: O-2018.06-SP4
+Date   : Wed Jan 27 17:46:27 2021
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db)
+
+Number of ports:                         4955
+Number of nets:                         18711
+Number of cells:                        13549
+Number of combinational cells:          10694
+Number of sequential cells:              2820
+Number of macros/black boxes:               0
+Number of buf/inv:                       2109
+Number of references:                       9
+
+Combinational area:              12620.370055
+Buf/Inv area:                     1524.445970
+Noncombinational area:           14437.416246
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 27057.786301
+Total area:                 undefined
+1
