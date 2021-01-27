@@ -1,0 +1,134 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'RISCV_pipeline_abs' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RISCV_pipeline_abs
+Version: O-2018.06-SP4
+Date   : Mon Jan 25 21:19:37 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: IMM_OUT_1_reg[2]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: BRANCH_SUM_1_reg[63]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV_pipeline_abs 5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  IMM_OUT_1_reg[2]/CK (DFF_X1)                            0.00 #     0.00 r
+  IMM_OUT_1_reg[2]/Q (DFF_X1)                             0.09       0.09 f
+  EX_STAGE/IMM_OUT_1[2] (EXECUTE_abs)                     0.00       0.09 f
+  EX_STAGE/EX_ADD/B[3] (ADDER_N64_2)                      0.00       0.09 f
+  EX_STAGE/EX_ADD/add_14/B[3] (ADDER_N64_2_DW01_add_1)
+                                                          0.00       0.09 f
+  EX_STAGE/EX_ADD/add_14/U732/ZN (NOR2_X1)                0.05       0.13 r
+  EX_STAGE/EX_ADD/add_14/U730/ZN (OAI21_X1)               0.03       0.17 f
+  EX_STAGE/EX_ADD/add_14/U499/ZN (AOI21_X1)               0.06       0.22 r
+  EX_STAGE/EX_ADD/add_14/U512/ZN (OAI21_X1)               0.03       0.26 f
+  EX_STAGE/EX_ADD/add_14/U475/ZN (AOI21_X1)               0.04       0.30 r
+  EX_STAGE/EX_ADD/add_14/U718/ZN (OAI21_X1)               0.03       0.33 f
+  EX_STAGE/EX_ADD/add_14/U480/ZN (AOI21_X1)               0.04       0.37 r
+  EX_STAGE/EX_ADD/add_14/U711/ZN (OAI21_X1)               0.03       0.40 f
+  EX_STAGE/EX_ADD/add_14/U474/ZN (AOI21_X1)               0.04       0.45 r
+  EX_STAGE/EX_ADD/add_14/U686/ZN (OAI21_X1)               0.03       0.48 f
+  EX_STAGE/EX_ADD/add_14/U472/ZN (AOI21_X1)               0.04       0.52 r
+  EX_STAGE/EX_ADD/add_14/U753/ZN (OAI21_X1)               0.03       0.55 f
+  EX_STAGE/EX_ADD/add_14/U469/ZN (AOI21_X1)               0.04       0.60 r
+  EX_STAGE/EX_ADD/add_14/U754/ZN (OAI21_X1)               0.03       0.63 f
+  EX_STAGE/EX_ADD/add_14/U384/ZN (AOI21_X1)               0.04       0.67 r
+  EX_STAGE/EX_ADD/add_14/U752/ZN (OAI21_X1)               0.03       0.70 f
+  EX_STAGE/EX_ADD/add_14/U464/ZN (AOI21_X1)               0.04       0.74 r
+  EX_STAGE/EX_ADD/add_14/U728/ZN (OAI21_X1)               0.03       0.78 f
+  EX_STAGE/EX_ADD/add_14/U697/ZN (AOI21_X1)               0.04       0.82 r
+  EX_STAGE/EX_ADD/add_14/U710/ZN (OAI21_X1)               0.03       0.85 f
+  EX_STAGE/EX_ADD/add_14/U689/ZN (AOI21_X1)               0.04       0.89 r
+  EX_STAGE/EX_ADD/add_14/U709/ZN (OAI21_X1)               0.03       0.93 f
+  EX_STAGE/EX_ADD/add_14/U493/ZN (AOI21_X1)               0.04       0.97 r
+  EX_STAGE/EX_ADD/add_14/U755/ZN (OAI21_X1)               0.03       1.00 f
+  EX_STAGE/EX_ADD/add_14/U751/ZN (AOI21_X1)               0.04       1.04 r
+  EX_STAGE/EX_ADD/add_14/U750/ZN (OAI21_X1)               0.03       1.07 f
+  EX_STAGE/EX_ADD/add_14/U500/ZN (AOI21_X1)               0.04       1.12 r
+  EX_STAGE/EX_ADD/add_14/U727/ZN (OAI21_X1)               0.03       1.15 f
+  EX_STAGE/EX_ADD/add_14/U699/ZN (AOI21_X1)               0.04       1.19 r
+  EX_STAGE/EX_ADD/add_14/U708/ZN (OAI21_X1)               0.03       1.22 f
+  EX_STAGE/EX_ADD/add_14/U502/ZN (AOI21_X1)               0.04       1.27 r
+  EX_STAGE/EX_ADD/add_14/U696/ZN (OAI21_X1)               0.03       1.30 f
+  EX_STAGE/EX_ADD/add_14/U495/ZN (AOI21_X1)               0.04       1.34 r
+  EX_STAGE/EX_ADD/add_14/U757/ZN (OAI21_X1)               0.03       1.37 f
+  EX_STAGE/EX_ADD/add_14/U749/ZN (AOI21_X1)               0.04       1.41 r
+  EX_STAGE/EX_ADD/add_14/U748/ZN (OAI21_X1)               0.03       1.45 f
+  EX_STAGE/EX_ADD/add_14/U470/ZN (AOI21_X1)               0.04       1.49 r
+  EX_STAGE/EX_ADD/add_14/U726/ZN (OAI21_X1)               0.03       1.52 f
+  EX_STAGE/EX_ADD/add_14/U466/ZN (AOI21_X1)               0.04       1.56 r
+  EX_STAGE/EX_ADD/add_14/U706/ZN (OAI21_X1)               0.03       1.60 f
+  EX_STAGE/EX_ADD/add_14/U476/ZN (AOI21_X1)               0.04       1.64 r
+  EX_STAGE/EX_ADD/add_14/U725/ZN (OAI21_X1)               0.03       1.67 f
+  EX_STAGE/EX_ADD/add_14/U481/ZN (AOI21_X1)               0.04       1.71 r
+  EX_STAGE/EX_ADD/add_14/U756/ZN (OAI21_X1)               0.03       1.74 f
+  EX_STAGE/EX_ADD/add_14/U19/CO (FA_X1)                   0.10       1.84 f
+  EX_STAGE/EX_ADD/add_14/U395/ZN (NAND2_X1)               0.04       1.88 r
+  EX_STAGE/EX_ADD/add_14/U377/ZN (NAND3_X1)               0.04       1.92 f
+  EX_STAGE/EX_ADD/add_14/U439/ZN (NAND2_X1)               0.03       1.95 r
+  EX_STAGE/EX_ADD/add_14/U442/ZN (NAND3_X1)               0.03       1.98 f
+  EX_STAGE/EX_ADD/add_14/U16/CO (FA_X1)                   0.10       2.08 f
+  EX_STAGE/EX_ADD/add_14/U365/ZN (NAND2_X1)               0.03       2.12 r
+  EX_STAGE/EX_ADD/add_14/U367/ZN (NAND3_X1)               0.04       2.16 f
+  EX_STAGE/EX_ADD/add_14/U446/ZN (NAND2_X1)               0.04       2.20 r
+  EX_STAGE/EX_ADD/add_14/U416/ZN (NAND3_X1)               0.04       2.24 f
+  EX_STAGE/EX_ADD/add_14/U457/ZN (NAND2_X1)               0.04       2.28 r
+  EX_STAGE/EX_ADD/add_14/U460/ZN (NAND3_X1)               0.04       2.31 f
+  EX_STAGE/EX_ADD/add_14/U373/ZN (NAND2_X1)               0.03       2.34 r
+  EX_STAGE/EX_ADD/add_14/U375/ZN (NAND3_X1)               0.05       2.39 f
+  EX_STAGE/EX_ADD/add_14/U359/ZN (NAND2_X1)               0.04       2.42 r
+  EX_STAGE/EX_ADD/add_14/U361/ZN (NAND3_X1)               0.04       2.46 f
+  EX_STAGE/EX_ADD/add_14/U10/CO (FA_X1)                   0.09       2.55 f
+  EX_STAGE/EX_ADD/add_14/U9/CO (FA_X1)                    0.10       2.64 f
+  EX_STAGE/EX_ADD/add_14/U428/ZN (NAND2_X1)               0.05       2.69 r
+  EX_STAGE/EX_ADD/add_14/U430/ZN (NAND3_X1)               0.04       2.73 f
+  EX_STAGE/EX_ADD/add_14/U435/ZN (NAND2_X1)               0.04       2.77 r
+  EX_STAGE/EX_ADD/add_14/U436/ZN (NAND3_X1)               0.04       2.81 f
+  EX_STAGE/EX_ADD/add_14/U408/ZN (NAND2_X1)               0.04       2.84 r
+  EX_STAGE/EX_ADD/add_14/U398/ZN (NAND3_X1)               0.04       2.89 f
+  EX_STAGE/EX_ADD/add_14/U413/ZN (NAND2_X1)               0.03       2.92 r
+  EX_STAGE/EX_ADD/add_14/U415/ZN (NAND3_X1)               0.04       2.96 f
+  EX_STAGE/EX_ADD/add_14/U4/CO (FA_X1)                    0.10       3.06 f
+  EX_STAGE/EX_ADD/add_14/U353/ZN (NAND2_X1)               0.03       3.09 r
+  EX_STAGE/EX_ADD/add_14/U355/ZN (NAND3_X1)               0.03       3.13 f
+  EX_STAGE/EX_ADD/add_14/U463/ZN (XNOR2_X1)               0.05       3.18 f
+  EX_STAGE/EX_ADD/add_14/SUM[63] (ADDER_N64_2_DW01_add_1)
+                                                          0.00       3.18 f
+  EX_STAGE/EX_ADD/S[63] (ADDER_N64_2)                     0.00       3.18 f
+  EX_STAGE/BRANCH_SUM[63] (EXECUTE_abs)                   0.00       3.18 f
+  BRANCH_SUM_1_reg[63]/D (DFF_X1)                         0.01       3.19 f
+  data arrival time                                                  3.19
+
+  clock MY_CLK (rise edge)                                3.30       3.30
+  clock network delay (ideal)                             0.00       3.30
+  clock uncertainty                                      -0.07       3.23
+  BRANCH_SUM_1_reg[63]/CK (DFF_X1)                        0.00       3.23 r
+  library setup time                                     -0.04       3.19
+  data required time                                                 3.19
+  --------------------------------------------------------------------------
+  data required time                                                 3.19
+  data arrival time                                                 -3.19
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
