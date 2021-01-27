@@ -15,7 +15,8 @@ module tb_riscv;
 
 	clk_gen CG (
 		.CLK(CLK_i),
-		.RST(RST_i)
+		.RST(RST_i),
+		.INSTR(INSTR_i)
 	);
 
 	INSTR_MEM IM (

@@ -3,7 +3,8 @@ use ieee.std_logic_1164.all;
 
 ENTITY clk_gen IS
 	PORT (
-		CLK,RST	: OUT std_logic
+		CLK,RST	: OUT std_logic;
+		INSTR	: IN STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
 END clk_gen;
 
@@ -16,22 +17,27 @@ BEGIN
 
 	PROCESS	--process that generates the clock signal
 	BEGIN
-		IF (CLK_i = 'U') THEN
-			CLK_i <= '0';
+		IF (INSTR = "00000000000000000000000011101111") THEN 	--END_SIM occurred
+			WAIT;
 		ELSE
-			CLK_i <= not(CLK_i);
+			IF (CLK_i = 'U') THEN
+				CLK_i <= '0';
+			ELSE
+				CLK_i <= not(CLK_i);
+			END IF;
+			WAIT FOR Ts/2;
 		END IF;
-		WAIT FOR Ts/2;
 	END PROCESS;
 
 	CLK <= CLK_i;
 
- process
-  begin  -- process
-    RST <= '0';
-    wait for 3*Ts/2;
-    RST <= '1';
-    wait;
-  end process;
+	PROCESS
+ 	BEGIN  -- process
+    	RST <= '0';
+    	WAIT FOR 3*Ts/2;
+    	RST <= '1';
+    	WAIT;
+	END PROCESS;
+
 
 END beh;

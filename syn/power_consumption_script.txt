@@ -1,0 +1,7 @@
+# EXECUTE BEFORE: # vcd2saif -input ../vcd/RISCV_pipeline_syn.vcd -output ../saif/RISCV_pipeline_syn.saif
+
+read verilog -netlist ../netlist/RISCV_pipeline.v
+read saif -input ../saif/RISCV_pipeline_syn.saif -instance tb_riscv/UUT -unit ns -scale 1
+create_clock -name MY_CLK CLK
+
+report_power > report_power.txt
