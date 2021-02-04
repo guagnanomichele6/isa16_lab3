@@ -16,12 +16,14 @@ END INSTR_MEM_abs;
 ARCHITECTURE BEHAVIOUR OF INSTR_MEM_abs IS
 
 	TYPE MEM_I_ARRAY IS ARRAY(0 TO 2**8-1) OF STD_LOGIC_VECTOR (31 DOWNTO 0);
+	SIGNAL mem_i : MEM_I_ARRAY;
+	SIGNAL SIM : STD_LOGIC;
+BEGIN
 
-	IMPURE FUNCTION init_i_mem RETURN MEM_I_ARRAY IS
-
+	SIM <= '1';
+	PROCESS(SIM)
 		VARIABLE	mem_f 		: MEM_I_ARRAY;
 		VARIABLE	count		: INTEGER RANGE 0 to 2**8-1;
-
 		-- Save instructions in mem_f from input hex file
 		FILE 		text_file 	: text OPEN READ_MODE IS "../sim/MachineCodeText_abs.hex";
 		VARIABLE	text_line 	: line;
@@ -31,7 +33,7 @@ ARCHITECTURE BEHAVIOUR OF INSTR_MEM_abs IS
 		VARIABLE	line_out	: line;
 
 	BEGIN
-
+		IF(SIM='1') THEN
 		WHILE NOT endfile(text_file) LOOP
 		    readline(text_file, text_line);
 		    hread(text_line, mem_f(count));
@@ -49,14 +51,10 @@ ARCHITECTURE BEHAVIOUR OF INSTR_MEM_abs IS
 			writeline(fp_out, line_out);
 		END LOOP;
 		file_close(fp_out);
+		END IF;
+		mem_i<=mem_f;
+	  END PROCESS;
 
-		RETURN mem_f;
-
-	END FUNCTION;
-
-	SIGNAL mem_i : MEM_I_ARRAY := init_i_mem;
-
-BEGIN
 
 		INSTR 	<= 	mem_i(TO_INTEGER(UNSIGNED(ADDRESS(9 DOWNTO 2)))); -- Divide by 4 because every instr is 4 byte, 9 DOWNTO 2 because mem_i has 2^8 entries
 
