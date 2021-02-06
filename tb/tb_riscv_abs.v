@@ -3,19 +3,18 @@
 module tb_riscv_abs;
 
 	wire CLK_i;
-	wire RST_i;
+	wire RST_N_i;
 	wire [63:0] DM_ADDRESS_i;
 	wire [63:0] IM_ADDRESS_i;
 	wire MEM_WRITE_i;
 	wire MEM_READ_i;
-	wire SMPL_STAT_i;
 	wire [31:0] INSTR_i;
 	wire [63:0] DATA_in;
 	wire [63:0] DATA_out;
 
 	clk_gen CG (
 		.CLK(CLK_i),
-		.RST(RST_i),
+		.RST_N(RST_N_i),
 		.INSTR(INSTR_i)
 	);
 
@@ -26,7 +25,7 @@ module tb_riscv_abs;
 
 	RISCV_pipeline_abs UUT (
 		.CLK(CLK_i),
-		.RST(RST_i),
+		.RST_N(RST_N_i),
    		.INSTRUCTION(INSTR_i),
    		.DM_READ_DATA(DATA_in),
    		.MEMWRITE_OUT(MEM_WRITE_i),

@@ -1,6 +1,5 @@
 add wave -noupdate /tb_riscv_abs/CLK_i
-add wave -noupdate /tb_riscv_abs/RST_i
-add wave -noupdate /tb_riscv_abs/SMPL_STAT_i
+add wave -noupdate /tb_riscv_abs/RST_N_i
 add wave -noupdate -radix hexadecimal /tb_riscv_abs/UUT/INSTRUCTION_OUT
 add wave -noupdate -radix hexadecimal /tb_riscv_abs/UUT/PC_OUT
 add wave -noupdate -divider ALU
@@ -25,3 +24,6 @@ add wave -noupdate /tb_riscv_abs/UUT/EX_STAGE/ALU_DP/ZERO2
 add wave -noupdate -divider MEMs
 add wave -noupdate -radix decimal /tb_riscv_abs/UUT/ID_STAGE/RF/MEM
 add wave -noupdate -radix decimal /tb_riscv_abs/DM/mem_d
+add wave -noupdate /tb_riscv_abs/UUT/MEMWRITE
+add wave -noupdate /tb_riscv_abs/UUT/MEMWRITE_1
+add wave -noupdate /tb_riscv_abs/UUT/MEMWRITE_2

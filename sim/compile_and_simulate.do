@@ -1,10 +1,9 @@
-# cd "C:/Users/Anto/Documents/GitHub/isa16_lab3/sim"
+# cd "C:/Users/anto7/Documents/GitHub/isa16_lab3/sim"
 
 vlib work
 vcom -work work {../src/common/ADDER.vhd}
 vcom -work work {../src/no_abs/ALU.vhd}
 vcom -work work {../src/no_abs/ALU_CONTROL.vhd}
-vcom -work work {../src/common/COMPARATOR.vhd}
 vcom -work work {../src/common/CONTROL.vhd}
 vcom -work work {../src/common/DECODE.vhd}
 vcom -work work {../src/no_abs/EXECUTE.vhd}
