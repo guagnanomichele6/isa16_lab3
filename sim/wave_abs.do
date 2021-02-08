@@ -1,5 +1,6 @@
 add wave -noupdate /tb_riscv_abs/CLK_i
 add wave -noupdate /tb_riscv_abs/RST_N_i
+add wave -noupdate /CG/end_sim
 add wave -noupdate -radix hexadecimal /tb_riscv_abs/UUT/INSTRUCTION_OUT
 add wave -noupdate -radix hexadecimal /tb_riscv_abs/UUT/PC_OUT
 add wave -noupdate -divider ALU

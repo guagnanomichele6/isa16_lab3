@@ -13,9 +13,9 @@ module tb_riscv;
 	wire [63:0] DATA_out;
 
 	clk_gen CG (
+		.INSTR(INSTR_i),
 		.CLK(CLK_i),
-		.RST_N(RST_N_i),
-		.INSTR(INSTR_i)
+		.RST_N(RST_N_i)
 	);
 
 	INSTR_MEM IM (
