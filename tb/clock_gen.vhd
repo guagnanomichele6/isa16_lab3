@@ -52,6 +52,10 @@ BEGIN
 		RST_N <= '0';
 		WAIT FOR 4*half_period;
 		RST_N <= '1';
+		WAIT FOR 40*half_period;
+		RST_N <= '0';
+		WAIT FOR 4*half_period;
+		RST_N <= '1';
 		WAIT;
 	END PROCESS;
 
