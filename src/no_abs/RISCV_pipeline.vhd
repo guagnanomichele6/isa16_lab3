@@ -132,9 +132,13 @@ MEMREAD_OUT	<=MEMREAD_2;
 IF_STAGE: FETCH PORT MAP (CLK,RST_N,BRANCH_SUM_1,PCsrc,PC_OUT,INSTRUCTION,INSTRUCTION_OUT);
 -------------------------------------------------------------------------------------------------------
 -- PIPELINE REGISTER stage 1
-PROCESS(CLK)
+PROCESS(CLK,RST_N)
 	BEGIN
-	IF (CLK'EVENT AND CLK='1') THEN
+	IF (RST_N='0') THEN
+						PC_1 			<=(OTHERS=>'0');
+						INSTRUCTION_1 	<=(OTHERS=>'0');
+
+	ELSIF (CLK'EVENT AND CLK='1') THEN
 		PC_1 			<=	UNSIGNED(PC_OUT);
 		INSTRUCTION_1 	<=	INSTRUCTION_OUT;
 	END IF;
@@ -145,9 +149,26 @@ ID_STAGE: DECODE PORT MAP (CLK,RST_N,PC_1,RD_3,INSTRUCTION_1,RF_WRITE_DATA,REGWR
 ID_CTRL: CONTROL PORT MAP (OPCODE,BRANCH,MEMREAD,MEMTOREG,ALUop,MEMWRITE,ALUsrc1,ALUsrc2,REGWRITE);
 -------------------------------------------------------------------------------------------------------
 -- PIPELINE REGISTER stage 2
-PROCESS(CLK)
+PROCESS(CLK,RST_N)
 	BEGIN
-	IF (CLK'EVENT AND CLK='1') THEN
+	IF (RST_N='0') THEN
+						PC_2 		   <=(OTHERS=>'0');
+						IMM_OUT_1 	   <=(OTHERS=>'0');
+						FUNC_1		   <=(OTHERS=>'0');
+						RD_1 		   <=(OTHERS=>'0');
+						RF_READ_DATA1_1<=(OTHERS=>'0');
+						RF_READ_DATA2_1<=(OTHERS=>'0');
+
+						BRANCH_1  <='0';
+						MEMREAD_1 <='0';
+						MEMTOREG_1<='0';
+						ALUop_1   <=(OTHERS=>'0');
+						MEMWRITE_1<='0';
+						ALUsrc1_1 <='0';
+						ALUsrc2_1 <='0';
+						REGWRITE_1<='0';
+
+	ELSIF (CLK'EVENT AND CLK='1') THEN
 		PC_2<=SIGNED(PC_1_OUT);
 		IMM_OUT_1<=SIGNED(IMM_OUT);
 		FUNC_1<=FUNC;
@@ -171,9 +192,22 @@ EX_STAGE: EXECUTE PORT MAP (PC_2,IMM_OUT_1,RD_1,RF_READ_DATA1_1,RF_READ_DATA2_1,
 EX_CTRL: ALU_CONTROL PORT MAP (ALUop_1,FUNC_1,ALUctrl);
 -------------------------------------------------------------------------------------------------------
 --PIPELINE REGISTER stage 3
-PROCESS(CLK)
+PROCESS(CLK,RST_N)
 	BEGIN
-	IF (CLK'EVENT AND CLK='1') THEN
+	IF (RST_N='0') THEN
+						ALU_RESULT_1   <=(OTHERS=>'0');
+						RF_READ_DATA2_2<=(OTHERS=>'0');
+						RD_2 		   <=(OTHERS=>'0');
+						ZERO_1 		   <='0';
+
+						BRANCH_2 	   <='0';
+						MEMREAD_2 	   <='0';
+						MEMTOREG_2 	   <='0';
+						MEMWRITE_2 	   <='0';
+						REGWRITE_2 	   <='0';
+						BRANCH_SUM_1   <=(OTHERS=>'0');
+
+	ELSIF (CLK'EVENT AND CLK='1') THEN
 		ALU_RESULT_1<=ALU_RESULT;
 		RF_READ_DATA2_2<=RF_READ_DATA2_1_OUT;
 		RD_2<=RD_1_OUT;
@@ -193,9 +227,17 @@ MEM_STAGE: MEM PORT MAP(ALU_RESULT_1,DM_ADDRESS,RF_READ_DATA2_2,DM_WRITE_DATA,DM
 PCsrc<=BRANCH_2 AND ZERO_1;
 -------------------------------------------------------------------------------------------------------
 --PIPELINE REGISTER stage 4
-PROCESS(CLK)
+PROCESS(CLK,RST_N)
 	BEGIN
-	IF (CLK'EVENT AND CLK='1') THEN
+	IF (RST_N='0') THEN
+						ALU_RESULT_2  <=(OTHERS=>'0');
+						DM_READ_DATA_1<=(OTHERS=>'0');
+						RD_3          <=(OTHERS=>'0');
+
+						MEMTOREG_3    <='0';
+						REGWRITE_3    <='0';
+
+	ELSIF (CLK'EVENT AND CLK='1') THEN
 		ALU_RESULT_2<=ALU_RESULT_1;
 		DM_READ_DATA_1<=DM_READ_DATA_OUT;
 		RD_3<=RD_2_OUT;
