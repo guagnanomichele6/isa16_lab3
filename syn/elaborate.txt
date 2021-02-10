@@ -123,12 +123,12 @@ Information: Building the design 'MEM'. (HDL-193)
 Presto compilation completed successfully.
 Information: Building the design 'WB'. (HDL-193)
 
-Statistics for case statements in always block at line 16 in file
+Statistics for case statements in always block at line 17 in file
 	'/home/isa16/lab3/isa16_lab3/src/common/WB.vhd'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            16            |    auto/auto     |
+|            17            |    auto/auto     |
 ===============================================
 Presto compilation completed successfully.
 Information: Building the design 'PC_REG'. (HDL-193)

@@ -16,5 +16,5 @@ rm -f ../netlist/RISCV_pipeline.v
 rm -f ../netlist/RISCV_pipeline.sdc
 
 source /software/scripts/init_synopsys_64.18
-dc_shell-xg-t -f ./syn_commands.txt
+# dc_shell-xg-t -f ./syn_commands.txt
 # design_vision &

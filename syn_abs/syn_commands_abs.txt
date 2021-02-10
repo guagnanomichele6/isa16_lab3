@@ -1,6 +1,6 @@
-### READ VHDL AND ELABORATE #6.41 was next
+### READ VHDL AND ELABORATE
 
-analyze -library WORK -format vhdl {/home/isa16/lab3/isa16_lab3/src/common/WB.vhd /home/isa16/lab3/isa16_lab3/src/common/SUBTRACTOR.vhd /home/isa16/lab3/isa16_lab3/src/common/REG_FILE.vhd /home/isa16/lab3/isa16_lab3/src/common/PC_REG.vhd /home/isa16/lab3/isa16_lab3/src/common/MEM.vhd /home/isa16/lab3/isa16_lab3/src/common/ImmGen.vhd /home/isa16/lab3/isa16_lab3/src/common/FETCH.vhd /home/isa16/lab3/isa16_lab3/src/common/DECODE.vhd /home/isa16/lab3/isa16_lab3/src/common/CONTROL.vhd /home/isa16/lab3/isa16_lab3/src/common/COMPARATOR.vhd /home/isa16/lab3/isa16_lab3/src/abs/RISCV_pipeline_abs.vhd /home/isa16/lab3/isa16_lab3/src/abs/EXECUTE_abs.vhd /home/isa16/lab3/isa16_lab3/src/abs/ALU_CONTROL_abs.vhd /home/isa16/lab3/isa16_lab3/src/abs/ALU_abs.vhd /home/isa16/lab3/isa16_lab3/src/common/ADDER.vhd}
+analyze -library WORK -format vhdl {/home/isa16/lab3/isa16_lab3/src/common/ADDER.vhd /home/isa16/lab3/isa16_lab3/src/common/SUBTRACTOR.vhd /home/isa16/lab3/isa16_lab3/src/common/PC_REG.vhd /home/isa16/lab3/isa16_lab3/src/common/REG_FILE.vhd /home/isa16/lab3/isa16_lab3/src/common/ImmGen.vhd /home/isa16/lab3/isa16_lab3/src/abs/ALU_CONTROL_abs.vhd /home/isa16/lab3/isa16_lab3/src/common/CONTROL.vhd /home/isa16/lab3/isa16_lab3/src/abs/ALU_abs.vhd /home/isa16/lab3/isa16_lab3/src/common/DECODE.vhd /home/isa16/lab3/isa16_lab3/src/abs/EXECUTE_abs.vhd /home/isa16/lab3/isa16_lab3/src/common/FETCH.vhd /home/isa16/lab3/isa16_lab3/src/common/MEM.vhd /home/isa16/lab3/isa16_lab3/src/common/WB.vhd /home/isa16/lab3/isa16_lab3/src/abs/RISCV_pipeline_abs.vhd}
 set power_preserve_rtl_hier_names true
 elaborate RISCV_pipeline_abs -arch STRUCT -lib WORK > elaborate.txt
 uniquify

@@ -8,7 +8,7 @@ Report : timing
         -max_paths 1
 Design : RISCV_pipeline
 Version: O-2018.06-SP4
-Date   : Wed Jan 27 17:25:23 2021
+Date   : Mon Feb  8 19:18:38 2021
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.

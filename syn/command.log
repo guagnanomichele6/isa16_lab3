@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Wed Jan 27 18:32:27 2021
+#@ # Date:   Mon Feb  8 19:01:43 2021
 #@ # Run by: isa16@localhost.localdomain
 #@ 
 
@@ -6638,14 +6638,26 @@ source /home/isa16/lab3/isa16_lab3/syn/.synopsys_dc.setup
 #@ set synthetic_library [list "dw_foundation.sldb" ]
 #@ # -- End source /home/isa16/lab3/isa16_lab3/syn/.synopsys_dc.setup
 
-source -echo -verbose /home/isa16/lab3/isa16_lab3/syn/./syn_commands_power_report.txt
-#@ # -- Starting source /home/isa16/lab3/isa16_lab3/syn/./syn_commands_power_report.txt
-
-#@ read_verilog -netlist ../netlist/RISCV_pipeline.v
-#@ read_saif -input ../saif/RISCV_pipeline_syn.saif -instance tb_riscv/UUT -unit ns -scale 1
-#@ create_clock -name MY_CLK CLK
-#@ 
-#@ report_power > report_power.txt
-#@ # -- End source /home/isa16/lab3/isa16_lab3/syn/./syn_commands_power_report.txt
-
-quit
+analyze -library WORK -format vhdl {/home/isa16/lab3/isa16_lab3/src/common/WB.vhd /home/isa16/lab3/isa16_lab3/src/common/SUBTRACTOR.vhd /home/isa16/lab3/isa16_lab3/src/common/REG_FILE.vhd /home/isa16/lab3/isa16_lab3/src/common/PC_REG.vhd /home/isa16/lab3/isa16_lab3/src/common/MEM.vhd /home/isa16/lab3/isa16_lab3/src/common/ImmGen.vhd /home/isa16/lab3/isa16_lab3/src/common/FETCH.vhd /home/isa16/lab3/isa16_lab3/src/common/DECODE.vhd /home/isa16/lab3/isa16_lab3/src/common/CONTROL.vhd /home/isa16/lab3/isa16_lab3/src/no_abs/RISCV_pipeline.vhd /home/isa16/lab3/isa16_lab3/src/no_abs/EXECUTE.vhd /home/isa16/lab3/isa16_lab3/src/no_abs/ALU_CONTROL.vhd /home/isa16/lab3/isa16_lab3/src/no_abs/ALU.vhd /home/isa16/lab3/isa16_lab3/src/common/ADDER.vhd}
+set power_preserve_rtl_hier_names true
+elaborate RISCV_pipeline -arch STRUCT -lib WORK > elaborate.txt
+uniquify
+link
+create_clock -name MY_CLK -period 8.76 CLK
+set_dont_touch_network MY_CLK
+set_clock_uncertainty 0.07 [get_clocks MY_CLK]
+set_input_delay 0.5 -max -clock MY_CLK [remove_from_collection [all_inputs] CLK]
+set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
+set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A]
+set_load $OLOAD [all_outputs]
+cehck_design
+check_design
+compile
+check_design
+report_timing > report_timing_8_76_ns_MET.txt
+report_area > report_area_8_76_ns_MET.txt
+ungroup -all -flatten
+change_names -hierarchy -rules verilog
+write_sdf ../netlist/RISCV_pipeline.sdf
+write -f verilog -hierarchy -output ../netlist/RISCV_pipeline.v
+write_sdc ../netlist/RISCV_pipeline.sdc
