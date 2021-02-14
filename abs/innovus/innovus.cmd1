@@ -1,0 +1,46 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Sun Feb 14 18:43:32 2021                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 17.11-s080_1 NR170721-2155/17_11-UB (database version 2.30, 390.7.1) {superthreading v1.44}
+#@(#)CDS: AAE 17.11-s034 (64bit) 08/04/2017 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 17.11-s053_1 () Aug  1 2017 23:31:41 ( )
+#@(#)CDS: SYNTECH 17.11-s012_1 () Jul 21 2017 02:29:12 ( )
+#@(#)CDS: CPE v17.11-s095
+#@(#)CDS: IQRC/TQRC 16.1.1-s215 (64bit) Thu Jul  6 20:18:10 PDT 2017 (Linux 2.6.18-194.el5)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getDrawView
+loadWorkspace -name Physical
+win
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+restoreDesign /home/isa16/lab3/isa16_lab3/abs/innovus/RISCV_pipeline_abs.enc.dat RISCV_pipeline_abs
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1
+gui_select -rect {189.512 155.542 157.525 116.174}
+gui_select -rect {137.489 106.331 163.852 147.458}
+setLayerPreference allM1 -isVisible 0
+setLayerPreference allM1 -isVisible 1
+setLayerPreference allM2Cont -isVisible 0
+setLayerPreference allM2Cont -isVisible 1
+setLayerPreference allM2 -isVisible 0
+setLayerPreference allM2 -isVisible 1
+setLayerPreference allM3Cont -isVisible 0
+setLayerPreference allM3Cont -isVisible 1
+setLayerPreference allM3 -isVisible 0
+setLayerPreference allM3 -isVisible 1
+setLayerPreference allM4Cont -isVisible 0
+setLayerPreference allM4Cont -isVisible 1
+gui_select -rect {235.208 202.644 154.713 116.174}
+deselectAll
+gui_select -rect {233.451 233.577 -10.145 -5.800}
+deselectAll

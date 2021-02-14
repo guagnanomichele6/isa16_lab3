@@ -42,11 +42,11 @@ ARCHITECTURE BEHAVIOUR OF DATA_MEM IS
 		RETURN m;
 	END init_mem_d;
 
-	SIGNAL mem_d	: MEM_D_ARRAY := init_mem_d(filename => "../sim/MachineCodeData.hex");
+	SIGNAL mem_d	: MEM_D_ARRAY := init_mem_d(filename => "../tb/MachineCodeData.hex");
 
 BEGIN
 
-	PROCESS(MEM_WRITE, MEM_READ)
+	PROCESS(ADDRESS)
 	BEGIN
 		IF(MEM_WRITE='1') THEN
 			mem_d(TO_INTEGER(UNSIGNED(ADDRESS(11 DOWNTO 2)))) <= WRITE_DATA;

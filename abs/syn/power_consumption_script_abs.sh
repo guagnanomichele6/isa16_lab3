@@ -6,13 +6,14 @@ if [ ! -f "./$SET_FILE" ]; then
 	exit
 fi
 
-rm -rf ./work/*
+rm -rf ./work
+mkdir work
 rm -f ./command.log
 rm -f ./default.svf
 rm -f ./elaborate.txt
 rm -f ./filenames.log
 
 source /software/scripts/init_synopsys_64.18
-vcd2saif -input ../vcd_abs/RISCV_pipeline_syn_abs.vcd -output ../saif_abs/RISCV_pipeline_syn_abs.saif
+vcd2saif -input ../vcd/RISCV_pipeline_syn_abs.vcd -output ../saif/RISCV_pipeline_syn_abs.saif
 dc_shell-xg-t -f ./syn_commands_power_report_abs.txt
 

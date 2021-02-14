@@ -1,0 +1,134 @@
+m255
+13
+cModel Technology
+d/home/isa16/lab3/isa16_lab3/abs/sim
+T_opt
+VQX[79YQNh8a_O3kR`fkBU3
+06 12 4 ./work tb_riscv_abs fast 0
+o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_riscv_abs/UUT=../innovus/RISCV_pipeline_abs.sdf -suppress 1948
+tExplicit 1
+OE;O;6.2g;35
+Eclk_gen
+w1613235282
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+31
+8../tb/clock_gen_abs.vhd
+F../tb/clock_gen_abs.vhd
+l0
+L4
+Vlcj`ET2f<5eWCWCH3F1M>3
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Abeh
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work clk_gen lcj`ET2f<5eWCWCH3F1M>3
+31
+M1 ieee std_logic_1164
+l17
+L11
+Vk`j60S32XikG_KTf0J25W0
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Edata_mem
+w1613178785
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+31
+8../tb/DATA_MEM.vhd
+F../tb/DATA_MEM.vhd
+l0
+L10
+V3QK4I2cHb2H3`de77CAiC3
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Abehaviour
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work data_mem 3QK4I2cHb2H3`de77CAiC3
+31
+M6 ieee std_logic_1164
+M5 ieee numeric_std
+M4 ieee std_logic_unsigned
+M3 ieee std_logic_arith
+M2 ieee std_logic_textio
+M1 std textio
+l47
+L19
+V_P]<<:?:MQG`J0<KFYnCd1
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Einstr_mem_abs
+w1613178829
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+31
+8../tb/INSTR_MEM_abs.vhd
+F../tb/INSTR_MEM_abs.vhd
+l0
+L10
+Vc=Rij4HSQ`UC_X:=@eZBL3
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Abehaviour
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work instr_mem_abs c=Rij4HSQ`UC_X:=@eZBL3
+31
+M6 ieee std_logic_1164
+M5 ieee numeric_std
+M4 ieee std_logic_unsigned
+M3 ieee std_logic_arith
+M2 ieee std_logic_textio
+M1 std textio
+l42
+L17
+V0RXVTN^>Z]RG:a`L51W9O2
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+vRISCV_pipeline_abs
+IN<TC<V5z?^dUIS4egIE6k1
+VEOKOW4JU1<XMnX@FiK]jS2
+w1613322999
+8../innovus/RISCV_pipeline_abs.v
+F../innovus/RISCV_pipeline_abs.v
+L0 15
+VEOKOW4JU1<XMnX@FiK]jS2
+OE;L;6.2g;35
+r1
+31
+o-work ./work
+n@r@i@s@c@v_pipeline_abs
+vtb_riscv_abs
+IOko<Llk?DX0bJjYBnB;C_3
+VCgh?PO?ffJOYg]RiXVBCG2
+w1612806744
+8../tb/tb_riscv_abs.v
+F../tb/tb_riscv_abs.v
+L0 3
+VCgh?PO?ffJOYg]RiXVBCG2
+OE;L;6.2g;35
+r1
+31
+o-work ./work

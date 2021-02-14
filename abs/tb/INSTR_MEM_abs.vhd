@@ -19,7 +19,7 @@ ARCHITECTURE BEHAVIOUR OF INSTR_MEM_abs IS
 	TYPE MEM_I_ARRAY IS ARRAY(0 TO 2**8-1) OF STD_LOGIC_VECTOR (31 DOWNTO 0);
 
 	IMPURE FUNCTION init_mem_i (filename : STRING) RETURN MEM_I_ARRAY IS
-		FILE read_file			: TEXT;
+		FILE read_file		: TEXT;
 		VARIABLE f_line		: LINE;
 		VARIABLE m			: MEM_I_ARRAY;
 		VARIABLE count		: NATURAL RANGE MEM_I_ARRAY'RANGE;
@@ -37,7 +37,7 @@ ARCHITECTURE BEHAVIOUR OF INSTR_MEM_abs IS
 		RETURN m;
 	END init_mem_i;
 
-	SIGNAL mem_i	: MEM_I_ARRAY := init_mem_i(filename => "../sim/MachineCodeText_abs.hex");
+	SIGNAL mem_i	: MEM_I_ARRAY := init_mem_i(filename => "../tb/MachineCodeText_abs.hex");
 
 BEGIN
 

@@ -37,7 +37,7 @@ ARCHITECTURE BEHAVIOUR OF INSTR_MEM IS
 		RETURN m;
 	END init_mem_i;
 
-	SIGNAL mem_i	: MEM_I_ARRAY := init_mem_i(filename => "./MachineCodeText.hex");
+	SIGNAL mem_i	: MEM_I_ARRAY := init_mem_i(filename => "../tb/MachineCodeText.hex");
 
 BEGIN
 

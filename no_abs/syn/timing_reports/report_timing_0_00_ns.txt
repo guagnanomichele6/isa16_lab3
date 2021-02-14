@@ -1,0 +1,78 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'RISCV_pipeline' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RISCV_pipeline
+Version: O-2018.06-SP4
+Date   : Wed Feb 10 17:57:26 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: ALUsrc2_1_reg
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: ZERO_1_reg (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV_pipeline     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ALUsrc2_1_reg/CK (DFFRS_X2)                             0.00 #     0.00 r
+  ALUsrc2_1_reg/Q (DFFRS_X2)                              0.09       0.09 f
+  EX_STAGE/ALUsrc2_1 (EXECUTE)                            0.00       0.09 f
+  EX_STAGE/U38/Z (CLKBUF_X3)                              0.07       0.16 f
+  EX_STAGE/U64/Z (MUX2_X1)                                0.11       0.27 r
+  EX_STAGE/ALU_DP/B[19] (ALU)                             0.00       0.27 r
+  EX_STAGE/ALU_DP/SUB/B[19] (SUBTRACTOR_N64)              0.00       0.27 r
+  EX_STAGE/ALU_DP/SUB/sub_16/B[19] (SUBTRACTOR_N64_DW01_sub_1)
+                                                          0.00       0.27 r
+  EX_STAGE/ALU_DP/SUB/sub_16/U965/ZN (INV_X1)             0.03       0.30 f
+  EX_STAGE/ALU_DP/SUB/sub_16/U1361/ZN (NOR2_X1)           0.06       0.36 r
+  EX_STAGE/ALU_DP/SUB/sub_16/U1360/ZN (OAI21_X1)          0.04       0.40 f
+  EX_STAGE/ALU_DP/SUB/sub_16/U1469/ZN (AOI21_X1)          0.07       0.47 r
+  EX_STAGE/ALU_DP/SUB/sub_16/U999/ZN (OAI21_X1)           0.04       0.51 f
+  EX_STAGE/ALU_DP/SUB/sub_16/U1664/ZN (AOI21_X1)          0.04       0.55 r
+  EX_STAGE/ALU_DP/SUB/sub_16/U1007/ZN (OAI21_X1)          0.04       0.59 f
+  EX_STAGE/ALU_DP/SUB/sub_16/U1371/Z (BUF_X2)             0.06       0.66 f
+  EX_STAGE/ALU_DP/SUB/sub_16/U1675/ZN (AOI21_X1)          0.05       0.71 r
+  EX_STAGE/ALU_DP/SUB/sub_16/U979/ZN (XNOR2_X1)           0.03       0.74 f
+  EX_STAGE/ALU_DP/SUB/sub_16/DIFF[43] (SUBTRACTOR_N64_DW01_sub_1)
+                                                          0.00       0.74 f
+  EX_STAGE/ALU_DP/SUB/S[43] (SUBTRACTOR_N64)              0.00       0.74 f
+  EX_STAGE/ALU_DP/U272/ZN (NOR2_X1)                       0.03       0.77 r
+  EX_STAGE/ALU_DP/U129/ZN (AND4_X1)                       0.07       0.84 r
+  EX_STAGE/ALU_DP/U280/ZN (NAND4_X1)                      0.04       0.88 f
+  EX_STAGE/ALU_DP/U277/ZN (OAI21_X1)                      0.04       0.92 r
+  EX_STAGE/ALU_DP/ZERO (ALU)                              0.00       0.92 r
+  EX_STAGE/ZERO (EXECUTE)                                 0.00       0.92 r
+  ZERO_1_reg/D (DFFR_X2)                                  0.01       0.93 r
+  data arrival time                                                  0.93
+
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                      -0.07      -0.07
+  ZERO_1_reg/CK (DFFR_X2)                                 0.00      -0.07 r
+  library setup time                                     -0.03      -0.10
+  data required time                                                -0.10
+  --------------------------------------------------------------------------
+  data required time                                                -0.10
+  data arrival time                                                 -0.93
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.04
+
+
+1

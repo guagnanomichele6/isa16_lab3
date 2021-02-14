@@ -8,7 +8,7 @@ Report : power
         -analysis_effort low
 Design : RISCV_pipeline
 Version: O-2018.06-SP4
-Date   : Wed Jan 27 18:33:12 2021
+Date   : Sat Feb 13 21:59:19 2021
 ****************************************
 
 
@@ -34,12 +34,12 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  =   1.9783 mW  (100%)
-  Net Switching Power  =   1.0874 uW    (0%)
+  Cell Internal Power  =   2.4976 mW   (90%)
+  Net Switching Power  = 291.1252 uW   (10%)
                          ---------
-Total Dynamic Power    =   1.9794 mW  (100%)
+Total Dynamic Power    =   2.7887 mW  (100%)
 
-Cell Leakage Power     = 553.1906 uW
+Cell Leakage Power     = 583.5977 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -49,9 +49,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register       1.9780e+03        4.1349e-02        2.4834e+05        2.2264e+03  (  87.91%)
+register       2.3273e+03           14.6437        2.4363e+05        2.5855e+03  (  76.67%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      0.2205            1.0460        3.0485e+05          306.1181  (  12.09%)
+combinational    170.3871          276.4826        3.3997e+05          786.8411  (  23.33%)
 --------------------------------------------------------------------------------------------------
-Total          1.9783e+03 uW         1.0874 uW     5.5319e+05 nW     2.5325e+03 uW
+Total          2.4977e+03 uW       291.1264 uW     5.8360e+05 nW     3.3724e+03 uW
 1

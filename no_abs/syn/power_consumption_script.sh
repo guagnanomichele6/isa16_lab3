@@ -6,7 +6,8 @@ if [ ! -f "./$SET_FILE" ]; then
 	exit
 fi
 
-rm -rf ./work/*
+rm -rf ./work
+mkdir work
 rm -f ./command.log
 rm -f ./default.svf
 rm -f ./elaborate.txt

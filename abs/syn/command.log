@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Wed Jan 27 18:37:12 2021
+#@ # Date:   Sun Feb 14 16:04:56 2021
 #@ # Run by: isa16@localhost.localdomain
 #@ 
 
@@ -6628,24 +6628,24 @@ source /software/synopsys/syn_current_64.18/admin/setup/.synopsys_dc.setup
 
 #@ # -- End source /software/synopsys/syn_current_64.18/admin/setup/.synopsys_dc.setup
 
-source /home/isa16/lab3/isa16_lab3/syn_abs/.synopsys_dc.setup
-#@ # -- Starting source /home/isa16/lab3/isa16_lab3/syn_abs/.synopsys_dc.setup
+source /home/isa16/lab3/isa16_lab3/abs/syn/.synopsys_dc.setup
+#@ # -- Starting source /home/isa16/lab3/isa16_lab3/abs/syn/.synopsys_dc.setup
 
 #@ define_design_lib WORK -path ./work
 #@ set search_path [list . /software/synopsys/syn_current_64.18/libraries/syn /software/dk/nangate45/synopsys ]
 #@ set link_library [list "*" "NangateOpenCellLibrary_typical_ecsm_nowlm.db" "dw_foundation.sldb" ]
 #@ set target_library [list "NangateOpenCellLibrary_typical_ecsm_nowlm.db" ]
 #@ set synthetic_library [list "dw_foundation.sldb" ]
-#@ # -- End source /home/isa16/lab3/isa16_lab3/syn_abs/.synopsys_dc.setup
+#@ # -- End source /home/isa16/lab3/isa16_lab3/abs/syn/.synopsys_dc.setup
 
-source -echo -verbose /home/isa16/lab3/isa16_lab3/syn_abs/./syn_commands_power_report_abs.txt
-#@ # -- Starting source /home/isa16/lab3/isa16_lab3/syn_abs/./syn_commands_power_report_abs.txt
+source -echo -verbose /home/isa16/lab3/isa16_lab3/abs/syn/./syn_commands_power_report_abs.txt
+#@ # -- Starting source /home/isa16/lab3/isa16_lab3/abs/syn/./syn_commands_power_report_abs.txt
 
-#@ read_verilog -netlist ../netlist_abs/RISCV_pipeline_abs.v
-#@ read_saif -input ../saif_abs/RISCV_pipeline_syn_abs.saif -instance tb_riscv_abs/UUT -unit ns -scale 1
+#@ read_verilog -netlist ../netlist/RISCV_pipeline_abs.v
+#@ read_saif -input ../saif/RISCV_pipeline_syn_abs.saif -instance tb_riscv_abs/UUT -unit ns -scale 1
 #@ create_clock -name MY_CLK CLK
 #@ 
-#@ report_power > report_power_abs.txt
-#@ # -- End source /home/isa16/lab3/isa16_lab3/syn_abs/./syn_commands_power_report_abs.txt
+#@ report_power > report_power.txt
+#@ # -- End source /home/isa16/lab3/isa16_lab3/abs/syn/./syn_commands_power_report_abs.txt
 
 quit

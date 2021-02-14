@@ -9,7 +9,7 @@ link
 
 ### APPLYING CONSTRAINTS
 
-create_clock -name MY_CLK -period 8.76 CLK
+create_clock -name MY_CLK -period 2.14 CLK
 set_dont_touch_network MY_CLK
 set_clock_uncertainty 0.07 [get_clocks MY_CLK]
 set_input_delay 0.5 -max -clock MY_CLK [remove_from_collection [all_inputs] CLK]
@@ -25,8 +25,9 @@ compile
 
 ### REPORTS
 
-report_timing > report_timing_8_76_ns_MET.txt
-report_area > report_area_8_76_ns_MET.txt
+report_timing > report_timing_2_14_ns_MET.txt
+report_area > report_area_2_14_ns.txt
+
 ungroup -all -flatten
 change_names -hierarchy -rules verilog
 write_sdf ../netlist/RISCV_pipeline.sdf
@@ -35,4 +36,4 @@ write_sdc ../netlist/RISCV_pipeline.sdc
 
 ### CLOSE
 
-# quit
+quit

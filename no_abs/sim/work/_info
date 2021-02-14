@@ -1,15 +1,15 @@
 m255
 13
 cModel Technology
-d/home/isa16/lab3/isa16_lab3/sim
+d/home/isa16/lab3/isa16_lab3/no_abs/sim
 T_opt
-VGAF8ggz4A9ZKzTEdQ1[mW1
+V?=9i^ghBfh<Bb1V>e=P3m2
 06 8 4 ./work tb_riscv fast 0
-o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_riscv/UUT=../netlist/RISCV_pipeline.sdf -suppress 1948
+o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_riscv/UUT=../innovus/RISCV_pipeline.sdf -suppress 1948
 tExplicit 1
 OE;O;6.2g;35
 Eclk_gen
-w1612972346
+w1613177478
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 8../tb/clock_gen.vhd
 F../tb/clock_gen.vhd
@@ -25,14 +25,14 @@ DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work clk_gen lcj`ET2f<5eWCWCH3F1M>3
 l17
 L11
-VFbKVDKmB9h>nKi4le5^@h1
+V8HcneHf4kPRKo]Xj^oR8M2
 OE;C;6.2g;35
 31
 M1 ieee std_logic_1164
 o-93 -work ./work
 tExplicit 1
 Edata_mem
-w1612806744
+w1613176908
 DP std textio K]Z^fghZ6B=BjnK5NomDT3
 DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
@@ -58,7 +58,7 @@ DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work data_mem 3QK4I2cHb2H3`de77CAiC3
 l47
 L19
-V0g847]LzS]XaL`E0k5ZmB3
+V_P]<<:?:MQG`J0<KFYnCd1
 OE;C;6.2g;35
 31
 M6 ieee std_logic_1164
@@ -70,7 +70,7 @@ M1 std textio
 o-93 -work ./work
 tExplicit 1
 Einstr_mem
-w1612806744
+w1612977958
 DP std textio K]Z^fghZ6B=BjnK5NomDT3
 DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
@@ -96,7 +96,7 @@ DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work instr_mem l[LD:?DPhIn_EZPfDP9`^1
 l42
 L17
-V3n6Nd8^Qk6ghB9IQh6JFL2
+VN<@z59>aN;IOngXm:jbjm3
 OE;C;6.2g;35
 31
 M6 ieee std_logic_1164
@@ -108,12 +108,12 @@ M1 std textio
 o-93 -work ./work
 tExplicit 1
 vRISCV_pipeline
-ILkkUR3z6<`ZWP:5C?PB><3
+IfGWiH^X=nGzmMA4@abTm83
 Vj3hZg@A73THX16KFdB6ig2
-w1612971707
-8../netlist/RISCV_pipeline.v
-F../netlist/RISCV_pipeline.v
-L0 8
+w1613264768
+8../innovus/RISCV_pipeline.v
+F../innovus/RISCV_pipeline.v
+L0 15
 Vj3hZg@A73THX16KFdB6ig2
 OE;L;6.2g;35
 r1

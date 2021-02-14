@@ -6,7 +6,8 @@ if [ ! -f "./$SET_FILE" ]; then
 	exit
 fi
 
-rm -rf ./work/*
+rm -rf ./work
+mkdir work
 rm -f ./command.log
 rm -f ./default.svf
 rm -f ./elaborate.txt
@@ -16,5 +17,5 @@ rm -f ../netlist/RISCV_pipeline.v
 rm -f ../netlist/RISCV_pipeline.sdc
 
 source /software/scripts/init_synopsys_64.18
-# dc_shell-xg-t -f ./syn_commands.txt
+dc_shell-xg-t -f ./syn_commands.txt
 # design_vision &

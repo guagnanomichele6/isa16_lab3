@@ -1,0 +1,1 @@
+/home/isa16/lab3/isa16_lab3/no_abs/netlist/RISCV_pipeline.sdc

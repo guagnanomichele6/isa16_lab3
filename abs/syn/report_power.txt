@@ -1,0 +1,57 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'RISCV_pipeline_abs' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : RISCV_pipeline_abs
+Version: O-2018.06-SP4
+Date   : Sun Feb 14 16:05:11 2021
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+RISCV_pipeline_abs     5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =   2.0614 mW   (90%)
+  Net Switching Power  = 229.0913 uW   (10%)
+                         ---------
+Total Dynamic Power    =   2.2905 mW  (100%)
+
+Cell Leakage Power     = 600.7763 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       1.9223e+03           12.3230        2.4348e+05        2.1781e+03  (  75.33%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational    139.0833          216.7687        3.5730e+05          713.1506  (  24.67%)
+--------------------------------------------------------------------------------------------------
+Total          2.0614e+03 uW       229.0917 uW     6.0078e+05 nW     2.8913e+03 uW
+1

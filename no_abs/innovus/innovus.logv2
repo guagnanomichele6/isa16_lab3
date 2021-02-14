@@ -1,0 +1,478 @@
+[02/14 03:09:38      0s] 
+[02/14 03:09:38      0s] Cadence Innovus(TM) Implementation System.
+[02/14 03:09:38      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+[02/14 03:09:38      0s] 
+[02/14 03:09:38      0s] Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
+[02/14 03:09:38      0s] Options:	
+[02/14 03:09:38      0s] Date:		Sun Feb 14 03:09:38 2021
+[02/14 03:09:38      0s] Host:		localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB)
+[02/14 03:09:38      0s] OS:		CentOS Linux release 7.6.1810 (Core) 
+[02/14 03:09:38      0s] 
+[02/14 03:09:38      0s] License:
+[02/14 03:09:39      0s] 		invs	Innovus Implementation System	17.1	checkout succeeded
+[02/14 03:09:39      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[02/14 03:10:56     21s] @(#)CDS: Innovus v17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
+[02/14 03:10:56     21s] @(#)CDS: NanoRoute 17.11-s080_1 NR170721-2155/17_11-UB (database version 2.30, 390.7.1) {superthreading v1.44}
+[02/14 03:10:56     21s] @(#)CDS: AAE 17.11-s034 (64bit) 08/04/2017 (Linux 2.6.18-194.el5)
+[02/14 03:10:56     21s] @(#)CDS: CTE 17.11-s053_1 () Aug  1 2017 23:31:41 ( )
+[02/14 03:10:56     21s] @(#)CDS: SYNTECH 17.11-s012_1 () Jul 21 2017 02:29:12 ( )
+[02/14 03:10:56     21s] @(#)CDS: CPE v17.11-s095
+[02/14 03:10:56     21s] @(#)CDS: IQRC/TQRC 16.1.1-s215 (64bit) Thu Jul  6 20:18:10 PDT 2017 (Linux 2.6.18-194.el5)
+[02/14 03:10:56     21s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
+[02/14 03:10:56     21s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[02/14 03:10:56     21s] @(#)CDS: RCDB 11.10
+[02/14 03:10:56     21s] --- Running on localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB) ---
+[02/14 03:10:57     21s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_23362_localhost.localdomain_isa16_8kuuPW.
+
+[02/14 03:10:57     21s] Change the soft stacksize limit to 0.2%RAM (31 mbytes). Set global soft_stack_size_limit to change the value.
+[02/14 03:11:01     22s] 
+[02/14 03:11:01     22s] **INFO:  MMMC transition support version v31-84 
+[02/14 03:11:01     22s] 
+[02/14 03:11:01     22s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[02/14 03:11:01     22s] <CMD> suppressMessage ENCEXT-2799
+[02/14 03:11:03     23s] <CMD> getDrawView
+[02/14 03:11:03     23s] <CMD> loadWorkspace -name Physical
+[02/14 03:11:03     23s] <CMD> win
+[02/14 03:12:12     25s] <CMD> encMessage warning 0
+[02/14 03:12:12     25s] Suppress "**WARN ..." messages.
+[02/14 03:12:12     25s] <CMD> encMessage debug 0
+[02/14 03:12:12     25s] <CMD> encMessage info 0
+[02/14 03:12:13     25s] **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+[02/14 03:12:14     25s] Loading view definition file from /home/isa16/lab3/isa16_lab3/no_abs/innovus/RISCV_pipeline.enc.dat/viewDefinition.tcl
+[02/14 03:12:14     25s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     25s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     25s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     25s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     25s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     25s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     25s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     25s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     25s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     25s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     25s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     25s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     25s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     25s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     26s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     26s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     26s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     26s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     26s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:14     26s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[02/14 03:12:18     27s] *** End library_loading (cpu=0.03min, real=0.07min, mem=21.9M, fe_cpu=0.46min, fe_real=2.67min, fe_mem=532.6M) ***
+[02/14 03:12:20     28s] *** Netlist is unique.
+[02/14 03:12:21     28s] Loading preference file /home/isa16/lab3/isa16_lab3/no_abs/innovus/RISCV_pipeline.enc.dat/gui.pref.tcl ...
+[02/14 03:12:21     28s] **WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[02/14 03:12:23     30s] **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+[02/14 03:12:41     31s] <CMD> setLayerPreference allM5 -isVisible 0
+[02/14 03:12:41     31s] <CMD> setLayerPreference allM5 -isVisible 1
+[02/14 03:12:45     31s] <CMD> gui_select -rect {131.476 159.511 141.463 169.114}
+[02/14 03:12:45     32s] <CMD> gui_select -rect {124.562 185.248 161.438 133.391}
+[02/14 03:12:51     32s] <CMD> setLayerPreference allM1 -isVisible 0
+[02/14 03:12:52     32s] <CMD> setLayerPreference allM1 -isVisible 1
+[02/14 03:12:54     32s] <CMD> setLayerPreference allM2Cont -isVisible 0
+[02/14 03:12:54     32s] <CMD> setLayerPreference allM2Cont -isVisible 1
+[02/14 03:12:55     32s] <CMD> setLayerPreference allM0 -isVisible 0
+[02/14 03:12:56     32s] <CMD> setLayerPreference allM0 -isVisible 1
+[02/14 03:12:57     32s] <CMD> setLayerPreference allM1 -isVisible 0
+[02/14 03:12:57     32s] <CMD> setLayerPreference allM0 -isVisible 0
+[02/14 03:12:58     32s] <CMD> setLayerPreference allM0 -isVisible 1
+[02/14 03:12:59     32s] <CMD> setLayerPreference allM1 -isVisible 1
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM0 -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM1 -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM2Cont -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM2 -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM3Cont -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM3 -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM4Cont -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM4 -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM5Cont -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM5 -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM6Cont -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM6 -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM7Cont -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM7 -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM8Cont -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM8 -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM9Cont -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM9 -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM10Cont -isVisible 0
+[02/14 03:13:00     32s] <CMD> setLayerPreference allM10 -isVisible 0
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM0 -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM1 -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM2Cont -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM2 -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM3Cont -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM3 -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM4Cont -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM4 -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM5Cont -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM5 -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM6Cont -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM6 -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM7Cont -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM7 -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM8Cont -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM8 -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM9Cont -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM9 -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM10Cont -isVisible 1
+[02/14 03:13:01     32s] <CMD> setLayerPreference allM10 -isVisible 1
+[02/14 03:15:29     35s] <CMD> setLayerPreference allM0 -isVisible 0
+[02/14 03:15:30     35s] <CMD> setLayerPreference allM0 -isVisible 1
+[02/14 03:15:45     36s] <CMD> encMessage warning 0
+[02/14 03:15:45     36s] Suppress "**WARN ..." messages.
+[02/14 03:15:45     36s] <CMD> encMessage debug 0
+[02/14 03:15:45     36s] <CMD> encMessage info 0
+[02/14 03:15:45     36s] Free PSO.
+[02/14 03:15:47     36s] **WARN: (IMPCK-8086):	The command setCTSMode is obsolete and will be removed in the next release. This command still works in this release, but by the next release you must transition to the CCOpt-based CTS flow.
+[02/14 03:15:49     37s] 
+[02/14 03:15:49     37s] 
+[02/14 03:15:49     37s] Info (SM2C): Status of key globals:
+[02/14 03:15:49     37s] 	 MMMC-by-default flow     : 1
+[02/14 03:15:49     37s] 	 Default MMMC objs envvar : 0
+[02/14 03:15:49     37s] 	 Data portability         : 0
+[02/14 03:15:49     37s] 	 MMMC PV Emulation        : 0
+[02/14 03:15:49     37s] 	 MMMC debug               : 0
+[02/14 03:15:49     37s] 	 Init_Design flow         : 1
+[02/14 03:15:49     37s] 
+[02/14 03:15:49     37s] 
+[02/14 03:15:49     37s] 	 CTE SM2C global          : false
+[02/14 03:15:49     37s] 	 Reporting view filter    : false
+[02/14 03:15:49     37s] **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+[02/14 03:15:50     37s] Loading view definition file from /home/isa16/lab3/isa16_lab3/no_abs/innovus/RISCV_pipeline.enc.dat/viewDefinition.tcl
+[02/14 03:15:54     40s] *** End library_loading (cpu=0.04min, real=0.07min, mem=10.0M, fe_cpu=0.67min, fe_real=6.27min, fe_mem=716.8M) ***
+[02/14 03:15:56     40s] *** Netlist is unique.
+[02/14 03:15:56     40s] Loading preference file /home/isa16/lab3/isa16_lab3/no_abs/innovus/RISCV_pipeline.enc.dat/gui.pref.tcl ...
+[02/14 03:15:56     40s] **WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[02/14 03:15:57     41s] **WARN: analysis view MyAnView not found, use default_view_setup
+[02/14 03:16:01     42s] **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+[02/14 03:16:08     43s] <CMD> encMessage warning 0
+[02/14 03:16:08     43s] Suppress "**WARN ..." messages.
+[02/14 03:16:08     43s] <CMD> encMessage debug 0
+[02/14 03:16:08     43s] <CMD> encMessage info 0
+[02/14 03:16:08     43s] Free PSO.
+[02/14 03:16:09     44s] **WARN: (IMPCK-8086):	The command setCTSMode is obsolete and will be removed in the next release. This command still works in this release, but by the next release you must transition to the CCOpt-based CTS flow.
+[02/14 03:16:11     44s] 
+[02/14 03:16:11     44s] 
+[02/14 03:16:11     44s] Info (SM2C): Status of key globals:
+[02/14 03:16:11     44s] 	 MMMC-by-default flow     : 1
+[02/14 03:16:11     44s] 	 Default MMMC objs envvar : 0
+[02/14 03:16:11     44s] 	 Data portability         : 0
+[02/14 03:16:11     44s] 	 MMMC PV Emulation        : 0
+[02/14 03:16:11     44s] 	 MMMC debug               : 0
+[02/14 03:16:11     44s] 	 Init_Design flow         : 1
+[02/14 03:16:11     44s] 
+[02/14 03:16:11     44s] 
+[02/14 03:16:11     44s] 	 CTE SM2C global          : false
+[02/14 03:16:11     44s] 	 Reporting view filter    : false
+[02/14 03:16:11     45s] **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+[02/14 03:16:12     45s] Loading view definition file from /home/isa16/lab3/isa16_lab3/no_abs/innovus/RISCV_pipeline.enc.dat/viewDefinition.tcl
+[02/14 03:16:15     47s] *** End library_loading (cpu=0.03min, real=0.05min, mem=4.6M, fe_cpu=0.79min, fe_real=6.62min, fe_mem=735.4M) ***
+[02/14 03:16:16     47s] *** Netlist is unique.
+[02/14 03:16:16     47s] Loading preference file /home/isa16/lab3/isa16_lab3/no_abs/innovus/RISCV_pipeline.enc.dat/gui.pref.tcl ...
+[02/14 03:16:16     47s] **WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[02/14 03:16:17     48s] **WARN: analysis view MyAnView not found, use default_view_setup
+[02/14 03:16:17     48s] **WARN: analysis view MyAnView not found, use default_view_setup
+[02/14 03:16:20     50s] **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+[02/14 03:16:26     51s] <CMD> setLayerPreference densityMap -isVisible 1
+[02/14 03:16:26     51s] <CMD> setLayerPreference pinDensityMap -isVisible 1
+[02/14 03:16:26     51s] <CMD> setLayerPreference timingMap -isVisible 1
+[02/14 03:16:26     51s] <CMD> setLayerPreference metalDensityMap -isVisible 1
+[02/14 03:16:26     51s] <CMD> setLayerPreference powerDensity -isVisible 1
+[02/14 03:16:26     51s] <CMD> setLayerPreference groupmain_Congestion -isVisible 1
+[02/14 03:16:27     51s] <CMD> ::fit main.layout.win
+[02/14 03:16:29     51s] <CMD> setLayerPreference trackObj -isVisible 1
+[02/14 03:16:29     51s] <CMD> setLayerPreference nonPrefTrackObj -isVisible 1
+[02/14 03:16:32     51s] <CMD> setLayerPreference densityMap -isVisible 0
+[02/14 03:16:32     51s] <CMD> setLayerPreference pinDensityMap -isVisible 0
+[02/14 03:16:32     51s] <CMD> setLayerPreference timingMap -isVisible 0
+[02/14 03:16:32     51s] <CMD> setLayerPreference metalDensityMap -isVisible 0
+[02/14 03:16:32     51s] <CMD> setLayerPreference powerDensity -isVisible 0
+[02/14 03:16:32     51s] <CMD> setLayerPreference groupmain_Congestion -isVisible 0
+[02/14 03:16:35     51s] <CMD> setLayerPreference trackObj -isVisible 0
+[02/14 03:16:35     51s] <CMD> setLayerPreference nonPrefTrackObj -isVisible 0
+[02/14 03:16:37     51s] <CMD> gui_select -rect {204.084 105.273 297.307 123.434}
+[02/14 03:16:39     51s] <CMD> gui_select -rect {293.675 263.268 -10.209 -67.856}
+[02/14 03:16:42     52s] <CMD> setLayerPreference trackObj -isVisible 1
+[02/14 03:16:42     52s] <CMD> setLayerPreference nonPrefTrackObj -isVisible 1
+[02/14 03:16:44     52s] <CMD> setLayerPreference trackObj -isVisible 0
+[02/14 03:16:44     52s] <CMD> setLayerPreference nonPrefTrackObj -isVisible 0
+[02/14 03:16:45     52s] <CMD> setLayerPreference densityMap -isVisible 1
+[02/14 03:16:45     52s] <CMD> setLayerPreference pinDensityMap -isVisible 1
+[02/14 03:16:45     52s] <CMD> setLayerPreference timingMap -isVisible 1
+[02/14 03:16:45     52s] <CMD> setLayerPreference metalDensityMap -isVisible 1
+[02/14 03:16:45     52s] <CMD> setLayerPreference powerDensity -isVisible 1
+[02/14 03:16:45     52s] <CMD> setLayerPreference groupmain_Congestion -isVisible 1
+[02/14 03:16:46     52s] <CMD> ::fit main.layout.win
+[02/14 03:16:51     52s] <CMD> deselectAll
+[02/14 03:17:28     54s] <CMD> gui_select -rect {127.446 16.034 128.846 15.950}
+[02/14 03:17:29     54s] <CMD> gui_select -rect {127.309 16.760 128.042 16.477}
+[02/14 03:17:51     55s] <CMD> setLayerPreference densityMap -isVisible 0
+[02/14 03:17:51     55s] <CMD> setLayerPreference pinDensityMap -isVisible 0
+[02/14 03:17:51     55s] <CMD> setLayerPreference timingMap -isVisible 0
+[02/14 03:17:51     55s] <CMD> setLayerPreference metalDensityMap -isVisible 0
+[02/14 03:17:51     55s] <CMD> setLayerPreference powerDensity -isVisible 0
+[02/14 03:17:51     55s] <CMD> setLayerPreference groupmain_Congestion -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM0 -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM1 -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM2Cont -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM2 -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM3Cont -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM3 -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM4Cont -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM4 -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM5Cont -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM5 -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM6Cont -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM6 -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM7Cont -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM7 -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM8Cont -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM8 -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM9Cont -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM9 -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM10Cont -isVisible 0
+[02/14 03:18:06     56s] <CMD> setLayerPreference allM10 -isVisible 0
+[02/14 03:18:12     56s] <CMD> setLayerPreference metalFill -isVisible 0
+[02/14 03:18:13     56s] <CMD> setLayerPreference metalFill -isVisible 1
+[02/14 03:18:14     56s] <CMD> setLayerPreference shield -isVisible 0
+[02/14 03:18:14     56s] <CMD> setLayerPreference shield -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM0 -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM1 -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM2Cont -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM2 -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM3Cont -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM3 -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM4Cont -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM4 -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM5Cont -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM5 -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM6Cont -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM6 -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM7Cont -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM7 -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM8Cont -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM8 -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM9Cont -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM9 -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM10Cont -isVisible 1
+[02/14 03:18:15     56s] <CMD> setLayerPreference allM10 -isVisible 1
+[02/14 03:18:16     57s] <CMD> setLayerPreference shield -isVisible 0
+[02/14 03:18:16     57s] <CMD> setLayerPreference unknowState -isVisible 0
+[02/14 03:18:16     57s] <CMD> setLayerPreference metalFill -isVisible 0
+[02/14 03:18:16     57s] <CMD> setLayerPreference wire -isVisible 0
+[02/14 03:18:16     57s] <CMD> setLayerPreference via -isVisible 0
+[02/14 03:18:16     57s] <CMD> setLayerPreference patch -isVisible 0
+[02/14 03:18:16     57s] <CMD> setLayerPreference trim -isVisible 0
+[02/14 03:18:17     57s] <CMD> setLayerPreference shield -isVisible 1
+[02/14 03:18:17     57s] <CMD> setLayerPreference unknowState -isVisible 1
+[02/14 03:18:17     57s] <CMD> setLayerPreference metalFill -isVisible 1
+[02/14 03:18:17     57s] <CMD> setLayerPreference wire -isVisible 1
+[02/14 03:18:17     57s] <CMD> setLayerPreference via -isVisible 1
+[02/14 03:18:17     57s] <CMD> setLayerPreference patch -isVisible 1
+[02/14 03:18:17     57s] <CMD> setLayerPreference trim -isVisible 1
+[02/14 03:18:18     57s] <CMD> setLayerPreference shield -isVisible 0
+[02/14 03:18:18     57s] <CMD> setLayerPreference shield -isVisible 1
+[02/14 03:18:19     57s] <CMD> setLayerPreference unknowState -isVisible 0
+[02/14 03:18:19     57s] <CMD> setLayerPreference unknowState -isVisible 1
+[02/14 03:18:29     57s] <CMD> gui_select -rect {-42.416 272.788 269.529 -48.355}
+[02/14 03:18:31     57s] <CMD> deselectAll
+[02/14 03:18:33     58s] <CMD> gui_select -rect {-15.591 232.166 259.565 -32.260}
+[02/14 03:18:49     58s] <CMD> gui_select -rect {196.107 60.580 199.369 63.842}
+[02/14 03:19:06     59s] <CMD> fit
+[02/14 03:19:31     60s] <CMD> reset_parasitics
+[02/14 03:19:31     60s] Performing RC Extraction ...
+[02/14 03:19:31     60s] <CMD> extractRC
+[02/14 03:19:31     60s] Extraction called for design 'RISCV_pipeline' of instances=41227 and nets=13996 using extraction engine 'postRoute' at effort level 'low' .
+[02/14 03:19:31     60s] **WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
+[02/14 03:19:31     60s] Type 'man IMPEXT-3530' for more detail.
+[02/14 03:19:31     60s] PostRoute (effortLevel low) RC Extraction called for design RISCV_pipeline.
+[02/14 03:19:31     60s] RC Extraction called in multi-corner(1) mode.
+[02/14 03:19:31     60s] Process corner(s) are loaded.
+[02/14 03:19:31     60s]  Corner: my_rc
+[02/14 03:19:31     60s] extractDetailRC Option : -outfile /tmp/innovus_temp_23362_localhost.localdomain_isa16_8kuuPW/RISCV_pipeline_23362_vprxT2.rcdb.d  -extended
+[02/14 03:19:31     60s] RC Mode: PostRoute -effortLevel low [Extended CapTable, RC Table Resistances]
+[02/14 03:19:31     60s]       RC Corner Indexes            0   
+[02/14 03:19:31     60s] Capacitance Scaling Factor   : 1.00000 
+[02/14 03:19:31     60s] Coupling Cap. Scaling Factor : 1.00000 
+[02/14 03:19:31     60s] Resistance Scaling Factor    : 1.00000 
+[02/14 03:19:31     60s] Clock Cap. Scaling Factor    : 1.00000 
+[02/14 03:19:31     60s] Clock Res. Scaling Factor    : 1.00000 
+[02/14 03:19:31     60s] Shrink Factor                : 1.00000
+[02/14 03:19:31     60s] Initializing multi-corner capacitance tables ... 
+[02/14 03:19:31     60s] Initializing multi-corner resistance tables ...
+[02/14 03:19:31     60s] Checking LVS Completed (CPU Time= 0:00:00.1  MEM= 904.9M)
+[02/14 03:19:32     60s] Creating parasitic data file '/tmp/innovus_temp_23362_localhost.localdomain_isa16_8kuuPW/RISCV_pipeline_23362_vprxT2.rcdb.d' for storing RC.
+[02/14 03:19:32     61s] Extracted 10.0007% (CPU Time= 0:00:00.4  MEM= 990.3M)
+[02/14 03:19:32     61s] Extracted 20.0008% (CPU Time= 0:00:00.6  MEM= 994.3M)
+[02/14 03:19:33     61s] Extracted 30.0009% (CPU Time= 0:00:00.6  MEM= 994.3M)
+[02/14 03:19:33     61s] Extracted 40.0011% (CPU Time= 0:00:00.8  MEM= 996.3M)
+[02/14 03:19:33     61s] Extracted 50.0012% (CPU Time= 0:00:01.0  MEM= 999.3M)
+[02/14 03:19:34     61s] Extracted 60.0007% (CPU Time= 0:00:01.2  MEM= 1001.3M)
+[02/14 03:19:35     62s] Extracted 70.0008% (CPU Time= 0:00:01.5  MEM= 1003.3M)
+[02/14 03:19:35     62s] Extracted 80.0009% (CPU Time= 0:00:01.7  MEM= 1005.3M)
+[02/14 03:19:36     62s] Extracted 90.0011% (CPU Time= 0:00:02.1  MEM= 1006.3M)
+[02/14 03:19:38     63s] Extracted 100% (CPU Time= 0:00:02.7  MEM= 1015.3M)
+[02/14 03:19:38     63s] Number of Extracted Resistors     : 257680
+[02/14 03:19:38     63s] Number of Extracted Ground Cap.   : 270976
+[02/14 03:19:38     63s] Number of Extracted Coupling Cap. : 411884
+[02/14 03:19:38     63s] Opening parasitic data file '/tmp/innovus_temp_23362_localhost.localdomain_isa16_8kuuPW/RISCV_pipeline_23362_vprxT2.rcdb.d' for reading.
+[02/14 03:19:38     63s] Filtering XCap in 'relativeOnly' mode using values relative_c_threshold=0.03 and total_c_threshold=5fF.
+[02/14 03:19:38     63s]  Corner: my_rc
+[02/14 03:19:38     63s] Checking LVS Completed (CPU Time= 0:00:00.1  MEM= 999.3M)
+[02/14 03:19:38     63s] Creating parasitic data file '/tmp/innovus_temp_23362_localhost.localdomain_isa16_8kuuPW/RISCV_pipeline_23362_vprxT2.rcdb_Filter.rcdb.d' for storing RC.
+[02/14 03:19:39     63s] Closing parasitic data file '/tmp/innovus_temp_23362_localhost.localdomain_isa16_8kuuPW/RISCV_pipeline_23362_vprxT2.rcdb.d'. 13770 times net's RC data read were performed.
+[02/14 03:19:39     63s] Lumped Parasitic Loading Started (total cpu=0:00:00.0, real=0:00:00.0, current mem=999.266M)
+[02/14 03:19:39     63s] Opening parasitic data file '/tmp/innovus_temp_23362_localhost.localdomain_isa16_8kuuPW/RISCV_pipeline_23362_vprxT2.rcdb.d' for reading.
+[02/14 03:19:39     63s] processing rcdb (/tmp/innovus_temp_23362_localhost.localdomain_isa16_8kuuPW/RISCV_pipeline_23362_vprxT2.rcdb.d) for hinst (top) of cell (RISCV_pipeline);
+[02/14 03:19:39     63s] Lumped Parasitic Loading Completed (total cpu=0:00:00.1, real=0:00:00.0, current mem=999.266M)
+[02/14 03:19:39     63s] PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:03.5  Real Time: 0:00:08.0  MEM: 999.266M)
+[02/14 03:19:39     64s] <CMD> rcOut -setload RISCV_pipeline.setload -rc_corner my_rc
+[02/14 03:19:39     64s] Opening parasitic data file '/tmp/innovus_temp_23362_localhost.localdomain_isa16_8kuuPW/RISCV_pipeline_23362_vprxT2.rcdb.d' for reading.
+[02/14 03:19:39     64s] RC Out has the following PVT Info:
+[02/14 03:19:39     64s]    RC:my_rc, Operating temperature 25 C
+[02/14 03:19:39     64s] RC Out from RCDB Completed (CPU Time= 0:00:00.1  MEM= 999.3M)
+[02/14 03:19:39     64s] Closing parasitic data file '/tmp/innovus_temp_23362_localhost.localdomain_isa16_8kuuPW/RISCV_pipeline_23362_vprxT2.rcdb.d'. 13770 times net's RC data read were performed.
+[02/14 03:19:39     64s] <CMD> rcOut -setres RISCV_pipeline.setres -rc_corner my_rc
+[02/14 03:19:39     64s] Opening parasitic data file '/tmp/innovus_temp_23362_localhost.localdomain_isa16_8kuuPW/RISCV_pipeline_23362_vprxT2.rcdb.d' for reading.
+[02/14 03:19:39     64s] RC Out has the following PVT Info:
+[02/14 03:19:39     64s]    RC:my_rc, Operating temperature 25 C
+[02/14 03:19:40     64s] RC Out from RCDB Completed (CPU Time= 0:00:00.1  MEM= 999.3M)
+[02/14 03:19:40     64s] Closing parasitic data file '/tmp/innovus_temp_23362_localhost.localdomain_isa16_8kuuPW/RISCV_pipeline_23362_vprxT2.rcdb.d'. 13770 times net's RC data read were performed.
+[02/14 03:19:40     64s] <CMD> rcOut -spf RISCV_pipeline.spf -rc_corner my_rc
+[02/14 03:19:40     64s] Opening parasitic data file '/tmp/innovus_temp_23362_localhost.localdomain_isa16_8kuuPW/RISCV_pipeline_23362_vprxT2.rcdb.d' for reading.
+[02/14 03:19:40     64s] RC Out has the following PVT Info:
+[02/14 03:19:40     64s]    RC:my_rc, Operating temperature 25 C
+[02/14 03:19:40     64s] Printing *|NET...
+[02/14 03:19:45     66s] RC Out from RCDB Completed (CPU Time= 0:00:02.6  MEM= 999.3M)
+[02/14 03:19:45     66s] Closing parasitic data file '/tmp/innovus_temp_23362_localhost.localdomain_isa16_8kuuPW/RISCV_pipeline_23362_vprxT2.rcdb.d'. 13770 times net's RC data read were performed.
+[02/14 03:19:45     66s] <CMD> rcOut -spef RISCV_pipeline.spef -rc_corner my_rc
+[02/14 03:19:45     66s] Opening parasitic data file '/tmp/innovus_temp_23362_localhost.localdomain_isa16_8kuuPW/RISCV_pipeline_23362_vprxT2.rcdb.d' for reading.
+[02/14 03:19:45     66s] RC Out has the following PVT Info:
+[02/14 03:19:45     66s]    RC:my_rc, Operating temperature 25 C
+[02/14 03:19:45     66s] Dumping Spef file.....
+[02/14 03:19:45     66s] Printing D_NET...
+[02/14 03:19:48     68s] RC Out from RCDB Completed (CPU Time= 0:00:01.2  MEM= 999.3M)
+[02/14 03:19:48     68s] Closing parasitic data file '/tmp/innovus_temp_23362_localhost.localdomain_isa16_8kuuPW/RISCV_pipeline_23362_vprxT2.rcdb.d'. 13770 times net's RC data read were performed.
+[02/14 03:20:09     68s] <CMD> set_power_analysis_mode -reset
+[02/14 03:20:09     68s] <CMD> set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+[02/14 03:21:32     70s] <CMD> set_power_output_dir -reset
+[02/14 03:21:32     70s] <CMD> set_power_output_dir ./
+[02/14 03:21:32     70s] <CMD> set_default_switching_activity -reset
+[02/14 03:21:32     70s] <CMD> set_default_switching_activity -input_activity 0.2 -period 10.0
+[02/14 03:21:32     70s] <CMD> read_activity_file -reset
+[02/14 03:21:32     70s] <CMD> read_activity_file -format VCD -scope /tb_riscv/UUT -start {} -end {} -block {} ../vcd/RISCV_pipeline_syn.vcd
+[02/14 03:21:32     70s] <CMD> set_power -reset
+[02/14 03:21:32     70s] <CMD> set_powerup_analysis -reset
+[02/14 03:21:32     70s] <CMD> set_dynamic_power_simulation -reset
+[02/14 03:21:32     70s] <CMD> report_power -rail_analysis_format VS -outfile .//RISCV_pipeline.rpt
+[02/14 03:21:32     70s] 
+[02/14 03:21:32     70s] Power Net Detected:
+[02/14 03:21:32     70s]     Voltage	    Name
+[02/14 03:21:32     70s]     0.00V	    VSS
+[02/14 03:21:32     70s]     1.10V	    VDD
+[02/14 03:21:32     70s] Starting SI iteration 1 using Infinite Timing Windows
+[02/14 03:21:33     71s] #################################################################################
+[02/14 03:21:33     71s] # Design Stage: PostRoute
+[02/14 03:21:33     71s] # Design Name: RISCV_pipeline
+[02/14 03:21:33     71s] # Design Mode: 90nm
+[02/14 03:21:33     71s] # Analysis Mode: MMMC OCV 
+[02/14 03:21:33     71s] # Parasitics Mode: SPEF/RCDB
+[02/14 03:21:33     71s] # Signoff Settings: SI On 
+[02/14 03:21:33     71s] #################################################################################
+[02/14 03:21:35     71s] AAE_INFO: 1 threads acquired from CTE.
+[02/14 03:21:35     71s] Setting infinite Tws ...
+[02/14 03:21:35     71s] First Iteration Infinite Tw... 
+[02/14 03:21:35     72s] Calculate early delays in OCV mode...
+[02/14 03:21:35     72s] Calculate late delays in OCV mode...
+[02/14 03:21:35     72s] Topological Sorting (REAL = 0:00:00.0, MEM = 999.3M, InitMEM = 999.3M)
+[02/14 03:21:35     72s] Start delay calculation (fullDC) (1 T). (MEM=999.266)
+[02/14 03:21:35     72s] Initializing multi-corner capacitance tables ... 
+[02/14 03:21:35     72s] Initializing multi-corner resistance tables ...
+[02/14 03:21:36     72s] Start AAE Lib Loading. (MEM=1015.62)
+[02/14 03:21:36     72s] End AAE Lib Loading. (MEM=1206.36 CPU=0:00:00.0 Real=0:00:00.0)
+[02/14 03:21:36     72s] End AAE Lib Interpolated Model. (MEM=1206.36 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[02/14 03:21:36     72s] Opening parasitic data file '/tmp/innovus_temp_23362_localhost.localdomain_isa16_8kuuPW/RISCV_pipeline_23362_vprxT2.rcdb.d' for reading.
+[02/14 03:21:36     72s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1177.8M)
+[02/14 03:21:36     72s] AAE_INFO: 1 threads acquired from CTE.
+[02/14 03:21:55     83s] Total number of fetched objects 16590
+[02/14 03:21:55     83s] AAE_INFO-618: Total number of nets in the design is 13996,  100.0 percent of the nets selected for SI analysis
+[02/14 03:21:56     83s] End Timing Check Calculation. (CPU Time=0:00:00.2, Real Time=0:00:01.0)
+[02/14 03:21:56     83s] End delay calculation. (MEM=1236.99 CPU=0:00:10.8 REAL=0:00:19.0)
+[02/14 03:21:56     83s] End delay calculation (fullDC). (MEM=1139.62 CPU=0:00:11.9 REAL=0:00:21.0)
+[02/14 03:21:56     83s] *** CDM Built up (cpu=0:00:12.9  real=0:00:23.0  mem= 1139.6M) ***
+[02/14 03:21:59     85s] Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1139.6M)
+[02/14 03:21:59     85s] Add other clocks and setupCteToAAEClockMapping during iter 1
+[02/14 03:21:59     85s] Loading CTE timing window is completed (CPU = 0:00:00.1, REAL = 0:00:00.0, MEM = 1139.6M)
+[02/14 03:21:59     85s] Starting SI iteration 2
+[02/14 03:22:00     85s] Calculate early delays in OCV mode...
+[02/14 03:22:00     85s] Calculate late delays in OCV mode...
+[02/14 03:22:00     85s] Start delay calculation (fullDC) (1 T). (MEM=1147.66)
+[02/14 03:22:00     85s] End AAE Lib Interpolated Model. (MEM=1147.66 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[02/14 03:22:01     85s] Glitch Analysis: View MyAnView -- Total Number of Nets Skipped = 0. 
+[02/14 03:22:01     85s] Glitch Analysis: View MyAnView -- Total Number of Nets Analyzed = 16590. 
+[02/14 03:22:01     85s] Total number of fetched objects 16590
+[02/14 03:22:01     85s] AAE_INFO-618: Total number of nets in the design is 13996,  0.0 percent of the nets selected for SI analysis
+[02/14 03:22:01     85s] End delay calculation. (MEM=1115.66 CPU=0:00:00.4 REAL=0:00:01.0)
+[02/14 03:22:01     85s] End delay calculation (fullDC). (MEM=1115.66 CPU=0:00:00.5 REAL=0:00:01.0)
+[02/14 03:22:01     85s] *** CDM Built up (cpu=0:00:00.5  real=0:00:01.0  mem= 1115.7M) ***
+[02/14 03:22:03     86s] 
+[02/14 03:22:03     86s] Begin Power Analysis
+[02/14 03:22:03     86s] 
+[02/14 03:22:03     86s]     0.00V	    VSS
+[02/14 03:22:03     86s]     1.10V	    VDD
+[02/14 03:22:03     86s] Begin Processing Timing Library for Power Calculation
+[02/14 03:22:03     86s] 
+[02/14 03:22:03     86s] Begin Processing Timing Library for Power Calculation
+[02/14 03:22:03     86s] 
+[02/14 03:22:03     86s] 
+[02/14 03:22:03     86s] 
+[02/14 03:22:03     86s] Begin Processing Power Net/Grid for Power Calculation
+[02/14 03:22:03     86s] 
+[02/14 03:22:03     86s] Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=871.81MB/871.81MB)
+[02/14 03:22:03     86s] 
+[02/14 03:22:03     86s] Begin Processing Timing Window Data for Power Calculation
+[02/14 03:22:03     86s] 
+[02/14 03:22:03     86s] MY_CLK(467.29MHz) Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=875.41MB/875.41MB)
+[02/14 03:22:03     86s] 
+[02/14 03:22:03     86s] Begin Processing User Attributes
+[02/14 03:22:03     86s] 
+[02/14 03:22:03     86s] Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=902.19MB/902.19MB)
+[02/14 03:22:03     86s] 
+[02/14 03:22:03     86s] Begin Processing Signal Activity
+[02/14 03:22:03     86s] 
+[02/14 03:22:09     89s] Ended Processing Signal Activity: (cpu=0:00:02, real=0:00:05, mem(process/total)=902.65MB/902.65MB)
+[02/14 03:22:09     89s] 
+[02/14 03:22:09     89s] Begin Power Computation
+[02/14 03:22:09     89s] 
+[02/14 03:22:09     89s]       ----------------------------------------------------------
+[02/14 03:22:09     89s]       # of cell(s) missing both power/leakage table: 0
+[02/14 03:22:09     89s]       # of cell(s) missing power table: 0
+[02/14 03:22:09     89s]       # of cell(s) missing leakage table: 0
+[02/14 03:22:09     89s]       # of MSMV cell(s) missing power_level: 0
+[02/14 03:22:09     89s]       ----------------------------------------------------------
+[02/14 03:22:09     89s] 
+[02/14 03:22:09     89s] 
+[02/14 03:22:22     96s] Ended Power Computation: (cpu=0:00:06, real=0:00:12, mem(process/total)=903.02MB/903.02MB)
+[02/14 03:22:22     96s] 
+[02/14 03:22:22     96s] Begin Processing User Attributes
+[02/14 03:22:22     96s] 
+[02/14 03:22:22     96s] Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=903.02MB/903.02MB)
+[02/14 03:22:22     96s] 
+[02/14 03:22:22     96s] Ended Power Analysis: (cpu=0:00:09, real=0:00:19, mem(process/total)=903.07MB/903.07MB)
+[02/14 03:22:22     96s] 
+[02/14 03:24:06    100s] <CMD> report_power -outfile report_power.txt -sort { total }
+[02/14 03:33:20    111s] 
+[02/14 03:33:20    111s] *** Memory Usage v#1 (Current mem = 1135.676M, initial mem = 179.684M) ***
+[02/14 03:33:20    111s] 
+[02/14 03:33:20    111s] *** Summary of all messages that are not suppressed in this session:
+[02/14 03:33:20    111s] Severity  ID               Count  Summary                                  
+[02/14 03:33:20    111s] WARNING   IMPEXT-3530          1  The process node is not set. Use the com...
+[02/14 03:33:20    111s] WARNING   IMPCK-8086           2  The command %s is obsolete and will be r...
+[02/14 03:33:20    111s] WARNING   IMPTCM-77            3  Option "%s" for command %s is obsolete a...
+[02/14 03:33:20    111s] WARNING   GLOBAL-100           6  Global '%s' has become obsolete. It will...
+[02/14 03:33:20    111s] WARNING   TECHLIB-436         20  Attribute '%s' on '%s' pin '%s' of cell ...
+[02/14 03:33:20    111s] *** Message Summary: 32 warning(s), 0 error(s)
+[02/14 03:33:20    111s] 
+[02/14 03:33:20    111s] --- Ending "Innovus" (totcpu=0:01:51, real=0:23:42, mem=1135.7M) ---

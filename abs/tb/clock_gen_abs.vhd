@@ -10,7 +10,7 @@ END clk_gen;
 
 ARCHITECTURE beh OF clk_gen IS
 
-	CONSTANT	half_period	: TIME		:= 5 ns;
+	CONSTANT	half_period	: TIME		:= 5.20 ns;
 	SIGNAL		CLK_i		: STD_LOGIC	:= '0';
 	SIGNAL		end_sim		: STD_LOGIC	:= '0';
 
@@ -50,7 +50,7 @@ BEGIN
 	PROCESS
 	BEGIN	--RST_N process
 		RST_N <= '0';
-		WAIT FOR 3*half_period;
+		WAIT FOR 5*half_period;
 		RST_N <= '1';
 		WAIT;
 	END PROCESS;
