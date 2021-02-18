@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Sat Feb 13 22:29:13 2021                
+#  Created on Thu Feb 18 21:56:03 2021                
 #                                                     
 #######################################################
 
@@ -32,6 +32,7 @@ set init_verilog ../netlist/RISCV_pipeline.v
 set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
 set init_gnd_net VSS
 set init_pwr_net VDD
+set init_mmmc_file mmm_design.tcl
 init_design
 getIoFlowFlag
 setIoFlowFlag 0
@@ -62,22 +63,14 @@ addRing -nets {VDD VSS} -type core_rings -follow core -layer {top metal1 bottom 
 clearGlobalNets
 globalNetConnect VDD -type pgpin -pin VDD -inst * -module {}
 globalNetConnect VSS -type pgpin -pin VSS -inst * -module {}
-clearGlobalNets
-globalNetConnect VDD -type pgpin -pin VDD -inst * -module {}
-globalNetConnect VSS -type pgpin -pin VSS -inst * -module {}
 setSrouteMode -viaConnectToShape { noshape }
 sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { metal1(1) metal10(10) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal10(10) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { metal1(1) metal10(10) }
 setPlaceMode -prerouteAsObs {1 2 3 4 5 6 7 8}
 setPlaceMode -fp false
 placeDesign
-selectWire 186.5950 176.9600 186.7350 178.0800 4 {ID_STAGE_RF_MEM[299]}
-deselectAll
-selectInst ID_STAGE_RF_U2168
-deselectAll
 setOptMode -fixCap true -fixTran true -fixFanoutLoad false
 optDesign -postCTS
-setOptMode -fixCap true -fixTran true -fixFanoutLoad false
-optDesign -postCTS
+optDesign -postCTS -hold
 getFillerMode -quiet
 addFiller -cell FILLCELL_X8 FILLCELL_X4 FILLCELL_X32 FILLCELL_X2 FILLCELL_X16 FILLCELL_X1 -prefix FILLER
 setNanoRouteMode -quiet -timingEngine {}
@@ -92,33 +85,50 @@ routeDesign -globalDetail
 setAnalysisMode -analysisType onChipVariation
 setOptMode -fixCap true -fixTran true -fixFanoutLoad false
 optDesign -postRoute
-setOptMode -fixCap true -fixTran true -fixFanoutLoad false
-optDesign -postRoute
+optDesign -postRoute -hold
 saveDesign RISCV_pipeline.enc
 getDrawView
 setDrawView fplan
 win
-dumpToGIF Snapshots/ss_RISCV_pipeline-post_route.fplan.gif
+dumpToGIF Snapshots/ss_RISCV_pipeline.fplan.gif
 getDrawView
 setDrawView amoeba
 win
-dumpToGIF Snapshots/ss_RISCV_pipeline-post_route.amoeba.gif
+dumpToGIF Snapshots/ss_RISCV_pipeline.amoeba.gif
 getDrawView
 setDrawView place
 win
-dumpToGIF Snapshots/ss_RISCV_pipeline-post_route.place.gif
+dumpToGIF Snapshots/ss_RISCV_pipeline.place.gif
 checkPlace checkplace.ss.rpt
 reset_parasitics
 extractRC
-rcOut -setload RISCV_pipeline.setload
-rcOut -setres RISCV_pipeline.setres
-rcOut -spf RISCV_pipeline.spf
-rcOut -spef RISCV_pipeline.spef
+rcOut -setload RISCV_pipeline.setload -rc_corner my_rc
+rcOut -setres RISCV_pipeline.setres -rc_corner my_rc
+rcOut -spf RISCV_pipeline.spf -rc_corner my_rc
+rcOut -spef RISCV_pipeline.spef -rc_corner my_rc
 redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
 timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix RISCV_pipeline_postRoute -outDir timingReports
 redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
-timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix RISCV_pipeline_postRoute -outDir timingReports
-set init_mmmc_file mmm_design.tcl
-init_design
-redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
-timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix RISCV_pipeline_postRoute -outDir timingReports
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix RISCV_pipeline_postRoute -outDir timingReports
+verifyConnectivity -type all -error 1000 -warning 50
+setVerifyGeometryMode -area { 0 0 0 0 } -minWidth true -minSpacing true -minArea true -sameNet true -short true -overlap true -offRGrid false -offMGrid true -mergedMGridCheck true -minHole true -implantCheck true -minimumCut true -minStep true -viaEnclosure true -antenna false -insuffMetalOverlap true -pinInBlkg false -diffCellViol true -sameCellViol false -padFillerCellsOverlap true -routingBlkgPinOverlap true -routingCellBlkgOverlap true -regRoutingOnly false -stackedViasOnRegNet false -wireExt true -useNonDefaultSpacing false -maxWidth true -maxNonPrefLength -1 -error 1000
+verifyGeometry
+setVerifyGeometryMode -area { 0 0 0 0 }
+reportGateCount -level 5 -limit 100 -outfile RISCV_pipeline.gateCount
+saveNetlist RISCV_pipeline.v
+all_hold_analysis_views 
+all_setup_analysis_views 
+write_sdf  -ideal_clock_network RISCV_pipeline.sdf
+set_power_analysis_mode -reset
+set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+set_power_output_dir -reset
+set_power_output_dir ./
+set_default_switching_activity -reset
+set_default_switching_activity -input_activity 0.2 -period 10.0
+read_activity_file -reset
+read_activity_file -format VCD -scope tb_riscv/UUT -start {} -end {} -block {} ../vcd/RISCV_pipeline_inn.vcd
+set_power -reset
+set_powerup_analysis -reset
+set_dynamic_power_simulation -reset
+report_power -rail_analysis_format VS -outfile .//RISCV_pipeline.rpt
+report_power -outfile report_power.txt -sort { total }

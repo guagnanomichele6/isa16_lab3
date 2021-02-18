@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Sun Feb 14 17:25:11 2021                
+#  Created on Thu Feb 18 22:48:00 2021                
 #                                                     
 #######################################################
 
@@ -83,15 +83,15 @@ saveDesign RISCV_pipeline_abs.enc
 getDrawView
 setDrawView fplan
 win
-dumpToGIF Snapshots/ss_RISCV_pipeline_abs-post_route.fplan.gif
+dumpToGIF Snapshots/ss_RISCV_pipeline_abs.fplan.gif
 getDrawView
 setDrawView amoeba
 win
-dumpToGIF Snapshots/ss_RISCV_pipeline_abs-post_route.amoeba.gif
+dumpToGIF Snapshots/ss_RISCV_pipeline_abs.amoeba.gif
 getDrawView
 setDrawView place
 win
-dumpToGIF Snapshots/ss_RISCV_pipeline_abs-post_route.place.gif
+dumpToGIF Snapshots/ss_RISCV_pipeline_abs.place.gif
 checkPlace checkplace.ss.rpt
 reset_parasitics
 extractRC
@@ -112,12 +112,6 @@ saveNetlist RISCV_pipeline_abs.v
 all_hold_analysis_views 
 all_setup_analysis_views 
 write_sdf  -ideal_clock_network RISCV_pipeline_abs.sdf
-reset_parasitics
-extractRC
-rcOut -setload RISCV_pipeline_abs.setload -rc_corner my_rc
-rcOut -setres RISCV_pipeline_abs.setres -rc_corner my_rc
-rcOut -spf RISCV_pipeline_abs.spf -rc_corner my_rc
-rcOut -spef RISCV_pipeline_abs.spef -rc_corner my_rc
 set_power_analysis_mode -reset
 set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
 set_power_output_dir -reset
@@ -125,7 +119,7 @@ set_power_output_dir ./
 set_default_switching_activity -reset
 set_default_switching_activity -input_activity 0.2 -period 10.0
 read_activity_file -reset
-read_activity_file -format VCD -scope /tb_riscv_abs/UUT -start {} -end {} -block {} ../vcd/RISCV_pipeline_inn_abs.vcd
+read_activity_file -format VCD -scope tb_riscv_abs/UUT -start {} -end {} -block {} ../vcd/RISCV_pipeline_inn_abs.vcd
 set_power -reset
 set_powerup_analysis -reset
 set_dynamic_power_simulation -reset

@@ -3,9 +3,9 @@ m255
 cModel Technology
 d/home/isa16/lab3/isa16_lab3/no_abs/sim
 T_opt
-V?=9i^ghBfh<Bb1V>e=P3m2
+VJ2n39CEa2jY`^AZoPnl_?1
 06 8 4 ./work tb_riscv fast 0
-o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_riscv/UUT=../innovus/RISCV_pipeline.sdf -suppress 1948
+o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_riscv/UUT=../netlist/RISCV_pipeline.sdf -suppress 1948
 tExplicit 1
 OE;O;6.2g;35
 Eclk_gen
@@ -108,12 +108,12 @@ M1 std textio
 o-93 -work ./work
 tExplicit 1
 vRISCV_pipeline
-IfGWiH^X=nGzmMA4@abTm83
+I2nRXG@L][5VQ8gdEP2e7f1
 Vj3hZg@A73THX16KFdB6ig2
-w1613264768
-8../innovus/RISCV_pipeline.v
-F../innovus/RISCV_pipeline.v
-L0 15
+w1613182113
+8../netlist/RISCV_pipeline.v
+F../netlist/RISCV_pipeline.v
+L0 8
 Vj3hZg@A73THX16KFdB6ig2
 OE;L;6.2g;35
 r1
