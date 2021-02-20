@@ -1,6 +1,6 @@
 ### READ VHDL AND ELABORATE
 
-analyze -library WORK -format vhdl {/home/isa16/lab3/isa16_lab3/src/common/ADDER.vhd /home/isa16/lab3/isa16_lab3/src/common/SUBTRACTOR.vhd /home/isa16/lab3/isa16_lab3/src/common/PC_REG.vhd /home/isa16/lab3/isa16_lab3/src/common/REG_FILE.vhd /home/isa16/lab3/isa16_lab3/src/common/ImmGen.vhd /home/isa16/lab3/isa16_lab3/src/no_abs/ALU_CONTROL.vhd /home/isa16/lab3/isa16_lab3/src/common/CONTROL.vhd /home/isa16/lab3/isa16_lab3/src/no_abs/ALU.vhd /home/isa16/lab3/isa16_lab3/src/common/DECODE.vhd /home/isa16/lab3/isa16_lab3/src/no_abs/EXECUTE.vhd /home/isa16/lab3/isa16_lab3/src/common/FETCH.vhd /home/isa16/lab3/isa16_lab3/src/common/MEM.vhd /home/isa16/lab3/isa16_lab3/src/common/WB.vhd /home/isa16/lab3/isa16_lab3/src/no_abs/RISCV_pipeline.vhd}
+analyze -library WORK -format vhdl {../../src/common/ADDER.vhd ../../src/common/SUBTRACTOR.vhd ../../src/common/PC_REG.vhd ../../src/common/REG_FILE.vhd ../../src/common/ImmGen.vhd ../../src/no_abs/ALU_CONTROL.vhd ../../src/common/CONTROL.vhd ../../src/no_abs/ALU.vhd ../../src/common/DECODE.vhd ../../src/no_abs/EXECUTE.vhd ../../src/common/FETCH.vhd ../../src/common/MEM.vhd ../../src/common/WB.vhd ../../src/no_abs/RISCV_pipeline.vhd}
 set power_preserve_rtl_hier_names true
 elaborate RISCV_pipeline -arch STRUCT -lib WORK > elaborate.txt
 uniquify
